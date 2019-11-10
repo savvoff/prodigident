@@ -1,0 +1,14 @@
+// Bootstrap functions
+//
+// Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
+@import '../../../../node_modules/bootstrap/scss/functions';
+
+// Calculate responsive font size
+@function calc-fluid-font-size($f-min, $f-max, $v-min, $v-max, $units: px) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b + $units;
+
+  @return calc( #{$k} * 100vw + #{$b} );
+}

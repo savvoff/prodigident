@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#e30613">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <title>ProDigiDent - Free Software for guided surger</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e30613">
+  <link rel="stylesheet" href="/assets/dist/css/app.css">
+</head>
+<body style="overflow: hidden;">
+  <div id="svg-sprites" style="width: 0; height: 0; visibility: hidden;"></div>
+  <div class="loader d-flex flex-column justify-content-center align-items-center">
+    <img src="/assets/dist/images/logo.svg" alt="logo">
+    <div class="loader-spinner"></div>
+  </div>
+  <header class="page-header border-bottom border-primary py-2 py-lg-0">
+    <div class="container-fluid no-gutters">
+      <div class="row justify-content-center no-gutters">
+        <div class="page-header__inner col-12 col-xl-10 d-flex align-items-center">
+          <div class="brand">
+            <a href="/"><svg class="brand-logo mb-n2"><use xlink:href="#logo"></use></svg></a>
+          </div>
+          <nav class="page-header__menu ml-auto">
+            <ul class="d-flex flex-column flex-lg-row list-unstyled m-auto mb-0">
+              <li class="d-inline-flex py-lg-3 active"><a class="m-0" href="#">Implant Planning</a></li>
+              <li class="d-inline-flex py-lg-3"><a class="m-0" href="/functions.html">Functions</a></li>
+              <li class="d-inline-flex py-lg-3"><a class="m-0" href="/downloads.html">Downloads</a></li>
+              <li class="d-inline-flex py-lg-3"><a class="m-0" href="/prices.html">Prices</a></li>
+              <li class="d-inline-flex flex-column py-lg-3">
+                <a class="m-0" href="/education.html">Education</a>
+                <ul class="page-header__menu_dropdown d-flex flex-column list-unstyled">
+                  <li class="d-inline-flex"><a class="m-0" href="/education.html">User Manual</a></li>
+                  <li class="d-inline-flex"><a class="m-0" href="/cases.html">Cases & Articles</a></li>
+                  <li class="d-inline-flex"><a class="m-0" href="/faq.html">F.A.Q</a></li>
+                  <li class="d-inline-flex"><a class="m-0" href="/videos.html">Video</a></li>
+                  <li class="d-inline-flex"><a class="m-0" href="/cases.html">Events</a></li>
+                </ul>
+              </li>
+              <li class="d-inline-flex py-lg-3"><a class="m-0" href="/contacts.html">Contact Us</a></li>
+            </ul>
+            <span class="slide-border d-none d-lg-block"></span>
+          </nav>
+          <div class="langs py-lg-4 ml-auto ml-lg-0">
+            <h5 class="text-primary text-uppercase m-0">RU</h5>
+            <ul class="langs_dropdown d-flex flex-column list-unstyled">
+              <li class="d-inline-flex"><a class="m-0" href="#">UA</a></li>
+              <li class="d-inline-flex"><a class="m-0" href="#">EN</a></li>
+            </ul>
+          </div>
+          <button class="burger d-lg-none ml-4 my-auto"><span></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="wrapper">
+    <aside class="page-aside">
+      <div class="social d-flex flex-column overflow-hidden shadow rounded bg-light p-2">
+        <a class="social__link social-fb rounded-lg shadow-sm m-1" href="#" target="_blank">
+          <svg class="icon m-auto"><use xlink:href="#facebook"></use></svg>
+        </a>
+        <a class="social__link social-inst rounded-lg shadow-sm m-1" href="#" target="_blank">
+          <svg class="icon m-auto"><use xlink:href="#instagram"></use></svg>
+        </a>
+        <a class="social__link social-in rounded-lg shadow-sm m-1" href="#" target="_blank">
+          <svg class="icon m-auto"><use xlink:href="#linkedin"></use></svg>
+        </a>
+        <a class="social__link social-yt rounded-lg shadow-sm m-1" href="#" target="_blank">
+          <svg class="icon m-auto"><use xlink:href="#youtube"></use></svg>
+        </a>
+      </div>
+    </aside>
+    <section class="page-section top-hero full-height d-flex">
+      <div class="particles" id="particles0" style="--rotation: 25deg; --posX: 30%; --posY: -50%"></div>
+      <div class="container-fluid align-self-center">
+        <div class="row justify-content-center" data-aos="fade-in">
+          <div class="col-12 col-lg-5 col-xl-4 order-1 order-lg-0 mt-6 mt-lg-0">
+            <h1 class="page-section__title text-secondary mb-4"><span>FREE</span> Software <br>for guided surgery</h1>
+            <h3 class="text-secondary mb-4">One Software - All The Functions</h3>
+            <p class="small text-secondary">Plan your dental implant placement procedure on your own, beginning with upload DICOM file and ending with a surgical guide creation. Work independently or within a team. Let us design your case or assist with all your planning and design needs.</p>
+            <a class="page-section__link text-truncate mb-4" href="#">Some more advanced functions <span></span></a>
+            <button class="btn btn-block btn-primary">DOWNLOAD ImplaStation <svg class="load mr-n3"><use xlink:href="#download"></use></svg></button>
+            <button class="btn btn-block btn-arrow">ORDER Guide <svg class="arrow mr-n3"><use xlink:href="#arrow"></use></svg></button>
+          </div>
+          <div class="col-12 col-lg-7 col-xl-6 text-center order-0 order-lg-1">
+            <svg class="brand-text w-100 mt-sm-2 mt-lg-n2"><use xlink:href="#logo-text"></use></svg>
+            <img class="mt-n4" src="/assets/dist/images/comp.png" alt="computer">
+            <img class="position-absolute" src="/assets/dist/images/laptop.png" alt="laptop">
+            <img class="position-absolute" src="/assets/dist/images/pattern.png" alt="pattern">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section py-4 py-xl-6">
+      <div class="particles" id="particles1" style="--rotation: 30deg; --posX: -35%; --posY: 60%"></div>
+      <div class="container-fluid">
+        <div class="row justify-content-center" data-aos="fade-right">
+          <div class="col-12 col-lg-10 text-center text-md-left mb-4">
+            <p class="page-section__title_active h1">GET ImplaStation for FREE</p>
+          </div>
+          <div class="col-12 col-lg-10" data-aos="fade-up">
+            <div class="row my-3 my-sm-5">
+              <div class="col-12 col-lg-9">
+                <div class="border border-primary border-bottom-0 text-center mx-auto" style="width: 70%;">
+                  <p class="position-relative d-md-inline-block text-primary bg-white px-3" style="bottom: 20px;">FREE Functions</p>
+                </div>
+                <div class="slider slider-functions mb-5">
+                  <div class="step text-center px-2">
+                    <figure class="step__img img-fluid">
+                      <svg><use xlink:href="#step"></use></svg>
+                      <div class="step__caption">
+                        <p class="h3 text-primary">VIEW</p>
+                        <p class="h3">CT</p>
+                      </div>
+                    </figure>
+                    <div class="d-flex">
+                      <div class="rounded-circle bg-primary mx-auto"></div>
+                    </div>
+                    <div class="my-3">
+                      <h5>BEST DICOM <span class="d-block font-weight-normal">viewer</span></h5>
+                    </div>
+                  </div>
+                  <div class="step text-center px-2">
+                    <figure class="step__img img-fluid">
+                      <svg><use xlink:href="#step"></use></svg>
+                      <div class="step__caption">
+                        <p class="h3 text-primary">PLAN</p>
+                        <p class="h3">Implantation</p>
+                      </div>
+                    </figure>
+                    <div class="d-flex">
+                      <div class="rounded-circle bg-primary mx-auto"></div>
+                    </div>
+                    <div class="my-3">
+                      <h5>MOST UNIVERSAL <span class="d-block font-weight-normal">& flexible planner</span></h5>
+                    </div>
+                  </div>
+                  <div class="step text-center px-2">
+                    <figure class="step__img img-fluid">
+                      <svg><use xlink:href="#step"></use></svg>
+                      <div class="step__caption">
+                        <p class="h3 text-primary">SHARE</p>
+                        <p class="h3">Projects</p>
+                      </div>
+                    </figure>
+                    <div class="d-flex">
+                      <div class="rounded-circle bg-primary mx-auto"></div>
+                    </div>
+                    <div class="my-3">
+                      <h5>FREE INTERACTION <span class="d-block font-weight-normal">within a team</span></h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-3">
+                <div class="border border-primary border-bottom-0 text-center mx-auto" style="width: 70%;">
+                  <p class="position-relative d-md-inline-block text-primary bg-white px-3" style="bottom: 20px;">PAID Functions</p>
+                </div>
+                <div class="step text-center">
+                  <figure class="step__img img-fluid">
+                    <svg class="active"><use xlink:href="#step"></use></svg>
+                    <div class="step__caption">
+                      <p class="h3 text-primary">CREATE</p>
+                      <p class="h3">Guide</p>
+                    </div>
+                  </figure>
+                  <div class="d-flex">
+                    <div class="rounded-circle bg-primary mx-auto"></div>
+                  </div>
+                  <div class="my-3">
+                    <h5>ANY GUIDE <span class="d-block font-weight-normal">for any surface</span></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="col-12 col-lg-4">
+                 <a class="page-section__link text-truncate mb-4" href="#">MORE Advanced Functions <span></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section">
+      <div class="particles" id="particles2" style="--rotation: -30deg; --posX: 30%; --posY: 60%"></div>
+      <svg class="brand-text_alt d-none d-xl-block"><use xlink:href="#logo-text-alt"></use></svg>
+      <div class="container-fluid">
+        <div class="row justify-content-center" data-aos="fade-right">
+          <div class="col-12 col-lg-10 text-center text-md-left">
+            <p class="page-section__title_active h1">CREATE Surgical Guide</p>
+          </div>
+          <div class="col-12 col-lg-10 col-xl-8" data-aos="fade-up">
+            <div class="row justify-content-center justify-content-md-between my-3 my-sm-5">
+              <div class="col-12 col-sm-10 col-md-6 col-lg-5 my-3">
+                <div class="d-flex flex-column justify-content-between bg-light shadow-sm text-center h-100">
+                  <h3 class="page-section__heading text-white bg-secondary py-4">In-House</h3>
+                  <p class="py-4 py-lg-5 px-5 mb-0">Plan on your own dental implant placement procedure, beginning with upload DICOM file and ending with a surgical guide creation.</p>
+                  <div class="py-4 px-5 mb-3">
+                    <button class="btn btn-block btn-primary btn-arrow border-0">Prices <svg class="arrow mr-n3"><use xlink:href="#arrow" fill="#fff"></use></svg></button>
+                    <button class="btn btn-block btn-arrow border-0">Download <svg class="arrow mr-n3"><use xlink:href="#arrow"></use></svg></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-10 col-md-6 col-lg-5 my-3">
+                <div class="d-flex flex-column justify-content-between bg-light shadow-sm text-center h-100">
+                  <h3 class="page-section__heading text-white bg-secondary py-4">In Our LAB</h3>
+                  <p class="py-4 py-lg-5 px-5 mb-0">Use the assistance of our ProDigiDent Lab! Place an order, send STL and DICOM files. Review and approve created case. Get surgical guide file and print it in your local laboratory.</p>
+                  <div class="py-4 px-5 mb-3">
+                    <button class="btn btn-block btn-primary btn-arrow border-0">Prices <svg class="arrow mr-n3"><use xlink:href="#arrow" fill="#fff"></use></svg></button>
+                    <button class="btn btn-block btn-arrow border-0">Download <svg class="arrow mr-n3"><use xlink:href="#arrow"></use></svg></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section bg-light">
+      <div class="particles" id="particles3" style="--rotation: 25deg; --posX: -35%; --posY: 60%"></div>
+      <div class="container-fluid">
+        <div class="row justify-content-center" data-aos="fade-right">
+          <div class="col-12 col-lg-10 text-center text-md-left">
+            <p class="page-section__title_active h1">MAKE Any Guide</p>
+          </div>
+          <div class="col-12 col-lg-10" data-aos="fade-up">
+            <div class="row no-gutters my-3 my-sm-5">
+              <div class="col-12 col-lg-4">
+                <div class="slider slider-guide-text">
+                  <figure class="slider-cell d-flex align-items-center w-100 py-3 py-md-5 mb-0">
+                    <p class="h2 text-white font-weight-normal mx-auto mb-0">Tooth Supported Guide1</p>
+                  </figure>
+                  <figure class="slider-cell d-flex align-items-center w-100 py-3 py-md-5 mb-0">
+                    <p class="h2 text-white font-weight-normal mx-auto mb-0">Tooth Supported Guide2</p>
+                  </figure>
+                  <figure class="slider-cell d-flex align-items-center w-100 py-3 py-md-5 mb-0">
+                    <p class="h2 text-white font-weight-normal mx-auto mb-0">Tooth Supported Guide3</p>
+                  </figure>
+                </div>
+              </div>
+              <div class="col-12 col-lg-8 mb-3 mb-md-5">
+                <div class="slider slider-guide shadow-sm py-3 py-md-5">
+                  <figure class="slider-cell img-fit img-fit_contain w-100 mb-0">
+                    <img class="img-fluid" src="/assets/dist/images/guide.png" alt="guide">
+                  </figure>
+                  <figure class="slider-cell img-fit img-fit_contain w-100 mb-0">
+                    <img class="img-fluid" src="/assets/dist/images/guide.png" alt="guide">
+                  </figure>
+                  <figure class="slider-cell img-fit img-fit_contain w-100 mb-0">
+                    <img class="img-fluid" src="/assets/dist/images/guide.png" alt="guide">
+                  </figure>
+                </div>
+              </div>
+              <div class="col-12 col-sm-5 col-lg-3">
+                <button class="btn btn-block btn-arrow border-0">Order the Guide <svg class="arrow mr-n3"><use xlink:href="#arrow"></use></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section py-4 py-xl-6">
+      <div class="particles" id="particles4" style="--rotation: -30deg; --posX: 30%; --posY: 60%"></div>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 text-center">
+            <p class="page-section__title text-secondary h1">Impla<span>Station</span> Software Slide Presentation</p>
+          </div>
+          <div class="d-flex justify-content-center col-12 col-lg-10 my-4">
+            <div class="slider-prezi__bg bg-secondary"></div>
+            <div class="slider slider-prezi bg-white border border-primary pb-0">
+              <figure class="slider-cell d-flex justify-content-center align-items-center img-fit img-fit_contain w-100 mb-0">
+                <img class="img-fluid" src="/assets/dist/images/screenshot.jpg" alt="guide">
+              </figure>
+              <figure class="slider-cell d-flex justify-content-center align-items-center img-fit img-fit_contain w-100 mb-0">
+                <img class="img-fluid" src="/assets/dist/images/guide.png" alt="guide">
+              </figure>
+              <figure class="slider-cell d-flex justify-content-center align-items-center img-fit img-fit_contain w-100 mb-0">
+                <img class="img-fluid" src="/assets/dist/images/screenshot.jpg" alt="guide">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="row justify-content-between align-items-center px-xl-5">
+              <div class="col-12 col-md-5 mb-4 mb-md-0">
+                <button class="btn btn-block btn-primary">DOWNLOAD ImplaStation <svg class="load mr-n3"><use xlink:href="#download"></use></svg></button>
+              </div>
+              <div class="col-12 col-md-4">
+                <a class="page-section__link text-truncate" href="#">View MORE... <span></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section bg-light">
+      <div class="container-fluid">
+        <div class="row justify-content-center" data-aos="fade-right">
+          <div class="col-12 col-lg-10 text-center text-md-left mb-4 mb-lg-6">
+            <p class="page-section__title_active h1">Upcomming EVENTS</p>
+          </div>
+          <div class="col-11 col-lg-10 my-4" data-aos="fade-up">
+            <div class="row no-gutters justify-content-center justify-content-md-between">
+              <div class="col-12 col-sm-8 col-md-3">
+                <a class="d-block text-center mb-6" href="">
+                  <figure class="thumb img-fit img-fit_contain">
+                    <img class="thumb__img" src="/assets/dist/images/event1.jpg" alt="event">
+                    <figcaption class="thumb__caption h5 bg-primary shadow text-white p-2">02.11 <hr class="border-white my-2 mx-n1">2019</figcaption>
+                  </figure>
+                  <p class="h6 font-weight-normal text-dark px-3">ImplaStation On Cowell International Conference, 02-03 November 2019, Jeju-Korea</p>
+                </a>
+              </div>
+              <div class="col-12 col-sm-8 col-md-3">
+                <a class="d-block text-center mb-6" href="">
+                  <figure class="thumb img-fit img-fit_contain">
+                    <img class="thumb__img" src="/assets/dist/images/event2.jpg" alt="event">
+                    <figcaption class="thumb__caption h5 bg-primary shadow text-white p-2">20.04 <hr class="border-white my-2 mx-n1">2019</figcaption>
+                  </figure>
+                  <p class="h6 font-weight-normal text-dark px-3">Master Class "Planning Implantation And Surgical Guides In ImplaStation</p>
+                </a>
+              </div>
+              <div class="col-12 col-sm-8 col-md-3">
+                <a class="d-block text-center mb-6" href="">
+                  <figure class="thumb img-fit img-fit_contain">
+                    <img class="thumb__img" src="/assets/dist/images/event3.jpg" alt="event">
+                    <figcaption class="thumb__caption h5 bg-primary shadow text-white p-2">12.03 <hr class="border-white my-2 mx-n1">2019</figcaption>
+                  </figure>
+                  <p class="h6 font-weight-normal text-dark px-3">38 International Dental Show Cologne, 12-16 March 2019</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section py-4">
+      <div class="particles" id="particles5" style="--rotation: -15deg; --posX: -25%; --posY: -35%"></div>
+      <div class="container-fluid">
+        <div class="row justify-content-center" data-aos="fade-right">
+          <div class="col-12 col-lg-10 text-center">
+            <p class="page-section__title text-secondary h1">Our Partners</p>
+          </div>
+          <div class="col-12 col-lg-10 my-4" data-aos="fade-up">
+            <div class="slider slider-partners bg-white mx-auto">
+              <figure class="slider-cell px-2 mb-0">
+                <div class="position-relative border border-primary img-fit">
+                  <img class="position-absolute img-fluid" src="//placehold.it/300x100" alt="guide">
+                </div>
+              </figure>
+              <figure class="slider-cell px-2 mb-0">
+                <div class="position-relative border border-primary img-fit">
+                  <img class="position-absolute img-fluid" src="//placehold.it/300x100" alt="guide">
+                </div>
+              </figure>
+              <figure class="slider-cell px-2 mb-0">
+                <div class="position-relative border border-primary img-fit">
+                  <img class="position-absolute img-fluid" src="//placehold.it/300x100" alt="guide">
+                </div>
+              </figure>
+              <figure class="slider-cell px-2 mb-0">
+                <div class="position-relative border border-primary img-fit">
+                  <img class="position-absolute img-fluid" src="//placehold.it/300x100" alt="guide">
+                </div>
+              </figure>
+              <figure class="slider-cell px-2 mb-0">
+                <div class="position-relative border border-primary img-fit">
+                  <img class="position-absolute img-fluid" src="//placehold.it/300x100" alt="guide">
+                </div>
+              </figure>
+              <figure class="slider-cell px-2 mb-0">
+                <div class="position-relative border border-primary img-fit">
+                  <img class="position-absolute img-fluid" src="//placehold.it/300x100" alt="guide">
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section bg-dark py-4">
+      <div class="container-fluid">
+        <div class="row justify-content-center" data-aos="fade-right">
+          <div class="col-12 col-lg-10 text-center">
+            <p class="page-section__title text-white h1">Join the <span class="text-light">Impla</span><span>Station</span> User' Club</p>
+          </div>
+          <div class="col-10 col-lg-8 col-xl-6 my-4" data-aos="fade-up">
+            <div class="row">
+              <div class="col-12 col-sm-5">
+                <ul class="page-section__list list-unstyled pl-3">
+                  <li class="text-uppercase mb-3"><p class="h6 text-white" href="#">special offers</p></li>
+                  <li class="text-uppercase mb-3"><p class="h6 text-white" href="#">new functionality</p></li>
+                  <li class="text-uppercase mb-3"><p class="h6 text-white" href="#">events</p></li>
+                </ul>
+              </div>
+              <div class="col-12 col-sm-7">
+                <div class="form">
+                  <div class="d-flex align-items-center">
+                    <input class="form__input w-100 mb-3" type="email" placeholder="Enter your E-mail:">
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <input class="form__input w-100 mb-3" type="text" placeholder="Enter your Name:">
+                  </div>
+                  <button class="btn btn-primary btn-block btn-arrow border-0">JOIN CLUB <svg class="arrow mr-n3"><use xlink:href="#arrow" fill="#fff"></use></svg></button>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer pt-3" data-aos="fade-in">
+    <div class="social d-flex justify-content-center bg-secondary py-2">
+      <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
+        <svg class="icon m-auto"><use xlink:href="#facebook"></use></svg>
+      </a>
+      <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
+        <svg class="icon m-auto"><use xlink:href="#instagram"></use></svg>
+      </a>
+      <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
+        <svg class="icon m-auto"><use xlink:href="#youtube"></use></svg>
+      </a>
+      <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
+        <svg class="icon m-auto"><use xlink:href="#linkedin"></use></svg>
+      </a>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="row my-3">
+            <div class="d-flex justify-content-center col-12 col-sm-6 col-md-4 col-xl-3 order-1 order-md-0">
+              <ul class="page-footer__list list-unstyled mt-3">
+                <li class="mb-2"><a class="h5" href="#">Implant Planning</a></li>
+                <li class="mb-2"><a class="h5" href="#">Functions</a></li>
+                <li class="mb-2"><a class="h5" href="#">Downloads</a></li>
+                <li class="mb-2"><a class="h5" href="#">Prices</a></li>
+                <li class="mb-2"><a class="h5" href="#">Education</a></li>
+                <li class="mb-2"><a class="h5" href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column border-md-x border-primary col-12 col-md-4 col-xl-6 text-center order-0 order-md-1">
+              <svg class="brand-text w-100 mx-auto"><use xlink:href="#logo-text"></use></svg>
+              <p class="text-dark-light my-2">Dental Implant Planning Software</p>
+              <div class="text-condensed mt-auto">
+                <h6 class="font-weight-normal">Ekaterinenskaya sq 8<br>Odessa, Ukraine</h6>
+                <a class="h5 d-block font-weight-normal py-1" href="tel:+38 067 787 11 00">+38 067 787 11 00</a>
+                <a class="h6 d-block font-weight-normal text-dark" href="mailto:prodigident@gmail.com">prodigident@gmail.com</a>
+              </div>
+            </div>
+            <button class="footer-toggler btn btn-primary btn-block d-block d-md-none my-3">Toogle menu</button>
+            <div class="d-flex justify-content-center col-12 col-sm-6 col-md-4 col-xl-3 order-2">
+              <ul class="page-footer__list_right list-unstyled mt-3">
+                <li class="mb-2"><a class="h5" href="#">Get ImplaStation for Free</a></li>
+                <li class="mb-2"><a class="h5" href="#">Create Surgical Guide</a></li>
+                <li class="mb-2"><a class="h5" href="#">Make Any Guide</a></li>
+                <li class="mb-2"><a class="h5" href="#">More Advanced Functions</a></li>
+                <li class="mb-2"><a class="h5" href="#">Upcomming Events</a></li>
+                <li class="mb-2"><a class="h5" href="#">Order The Guide</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="social border-top border-primary text-center bg-dark p-2">
+      <div class="d-inline-block text-white">
+        <a class="h6 font-weight-normal text-white text-truncate mx-1 mb-0" href="#">Privacy Policy</a> |
+        <a class="h6 font-weight-normal text-white text-truncate mx-1 mb-0" href="#">Cookies Policy</a> |
+        <a class="h6 font-weight-normal text-white text-truncate mx-1 mb-0" href="#">Terms Of Use</a> |
+        <a class="h6 font-weight-normal text-white text-truncate mx-1 mb-0" href="#">Quality Policy</a>
+      </div>
+      <p class="h6 font-weight-normal text-dark-light py-1 mx-1 mb-0">&copy; 2016 - <span id="year"></span> ImplaStation | ProDigiDent. All Rights Reserved</p>
+      <script>document.getElementById('year').innerText = new Date().getFullYear()</script>
+    </div>
+  </footer>
+  <button class="btn btn-to-top p-0" type="button">
+    <svg class="arrow"><use xlink:href="#up-arrow"></use></svg>
+  </button>
+  <script type="text/javascript" src="/assets/dist/javascript/app.js"></script>
+</body>
+</html>

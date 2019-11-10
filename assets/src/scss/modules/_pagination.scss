@@ -1,0 +1,32 @@
+@import "../../../../node_modules/bootstrap/scss/pagination";
+.page-item {
+  display: flex;
+  align-items: center;
+  &:first-child {
+    .arrow {
+      transform: scale(-1)
+    }
+  }
+}
+.page-link {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 50%;
+  font-size: $font-size-base;
+  @include media-breakpoint-up(lg) {
+    padding: 0.75rem 1.25rem;
+  }
+  .arrow {
+    float: none;
+  }
+  @include hover-focus() {
+    border: none;
+    background-color: transparent;
+    .arrow {
+      fill: $primary;
+    }
+  }
+  &.btn-arrow {
+    min-width: auto;
+  }
+}

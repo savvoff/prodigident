@@ -1,0 +1,136 @@
+.page-section {
+  position: relative;
+  overflow: hidden;
+  article, .article {
+    p, ul, ol, dl, img, blockquote {
+      margin-bottom: $spacer;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: $spacer * 1.5;
+    }
+  }
+  .particles {
+    position: absolute;
+    top: var(--posY);
+    left: var(--posX);
+    width: 100%;
+    height: 100%;
+    transform: rotate(var(--rotation));
+    opacity: 0.5;
+  }
+  &__list {
+    li {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -$spacer * 1.5;
+        margin-top: -6px;
+        border-left: 12px solid $primary;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        @include transition(0.5s $ease-out-cubic);
+      }
+      @include hover {
+        &:before {
+          left: -$spacer;
+        }
+      }
+    }
+    a {
+      color: $black;
+      font-weight: $font-weight-normal;
+      @include hover-focus {
+        color: $primary;
+      }
+    }
+  }
+  &__title {
+    span {
+      color: $primary;
+    }
+    &_active {
+      position: relative;
+      z-index: 1;
+      @include media-breakpoint-down(sm) {
+        font-size: 7vw;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: 45%;
+        left: calc(-100% - #{$spacer});
+        width: 100%;
+        height: 10%;
+        background-color: $primary;
+        z-index: -1;
+      }
+      &.red {
+        &:before {
+          position: absolute;
+          top: 0;
+          left: -5%;
+          width: 110%;
+          height: 100%;
+          @include media-breakpoint-up(md) {
+            left: -25%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &__heading {
+    font-weight: 500;
+  }
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    span {
+      position: relative;
+      margin-left: $spacer;
+      height: 1px;
+      width: 100%;
+      background-color: $primary;
+      @include transition(0.3s $ease-out-cubic);
+      &:after, &:before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 5px;
+        height: 1px;
+        transform: rotate(40deg);
+        background-color: $primary;
+      }
+      &:before {
+        top: -1px;
+        bottom: initial;
+        transform: rotate(-40deg);
+      }
+    }
+    @include hover-focus {
+      span {
+        margin-left: $spacer / 2;
+      }
+    }
+  }
+  &.top-hero {
+    overflow: initial;
+    img {
+      width: 70%;
+      &:nth-child(3) {
+        right: 0;
+        bottom: -15%;
+        width: 60%;
+      }
+      &:nth-child(4) {
+        left: 10%;
+        bottom: -15%;
+        width: 35%;
+      }
+    }
+  }
+}

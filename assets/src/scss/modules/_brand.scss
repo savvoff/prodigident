@@ -1,0 +1,25 @@
+.brand {
+  position: relative;
+  z-index: 1;
+  &-logo {
+    max-width: 200px;
+    max-height: 50px;
+  }
+  &-text {
+    max-width: 60%;
+    max-height: 100px;
+    .page-footer & {
+      max-height: 50px;
+    }
+    &_alt {
+      position: absolute;
+      top: 15%;
+      height: 80%;
+    }
+  }
+  &-lab {
+    right: 0;
+    max-width: 300px;
+    max-height: 70px;
+  }
+}

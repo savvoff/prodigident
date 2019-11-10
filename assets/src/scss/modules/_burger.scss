@@ -1,0 +1,54 @@
+.burger {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  @include hover-focus {
+    outline: none;
+  }
+  span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: $border-radius-sm;
+    background-color: $primary;
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      border-radius: $border-radius-sm;
+      background-color: $primary;
+    }
+    &:before {
+      top: -8px;
+      transition: top 0.15s $ease-in-sine 0.25s, opacity 0.15s $ease-in-sine;
+    }
+    &:after {
+      bottom: -8px;
+      transition: bottom 0.15s $ease-in-sine 0.25s,transform 0.15s $ease-out-cubic;
+    }
+  }
+  .is-open & {
+    span {
+      transition-delay: 0.25s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: rotate(45deg);
+      &:before {
+        top: 0;
+        transition: top 0.15s $ease-in-sine, opacity 0.15s $ease-in-sine 0.25s;
+        opacity: 0;
+      }
+      &:after {
+        bottom: 0;
+        transition: bottom 0.15s $ease-in-sine, transform 0.15s $ease-out-circ 0.25s;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

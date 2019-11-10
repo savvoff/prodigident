@@ -1,0 +1,29 @@
+.thumb {
+  position: relative;
+  min-height: 170px;
+  @include hover-focus {
+    .thumb__img {
+      transform: translate(0, 0) scale(1.05);
+    }
+    .thumb__caption {
+      top: -5%;
+      right: 0;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    transform: translate(2%, -2%) scale(1);
+    @include transition(0.5s $ease-out-quint);
+  }
+  &__caption {
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 120px;
+    top: -12%;
+    right: -2%;
+    @include transition(0.3s $ease-out-cubic);
+  }
+}

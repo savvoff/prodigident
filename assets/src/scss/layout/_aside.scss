@@ -1,0 +1,19 @@
+.page-aside {
+  position: fixed;
+  top: 50%;
+  right: -64px;
+  transform: translateY(-50%);
+  @include transition(right 0.3s 0.2s $ease-out-cubic);
+  z-index: $zindex-fixed;
+  @include media-breakpoint-up(md) {
+    right: -4px;
+  }
+  &.is-show {
+    right: -4px;
+  }
+  .social__link {
+    .icon {
+      fill: $white;
+    }
+  }
+}

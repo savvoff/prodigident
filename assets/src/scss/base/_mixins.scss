@@ -1,0 +1,70 @@
+// Toggles
+//
+// Used in conjunction with global variables to enable certain theme features.
+
+// Vendor
+// @import "vendor/rfs";
+
+// Deprecate
+@import "../../../../node_modules/bootstrap/scss/mixins/deprecate";
+
+// Utilities
+@import "../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../../../node_modules/bootstrap/scss/mixins/hover";
+@import "../../../../node_modules/bootstrap/scss/mixins/image";
+// @import "mixins/badge";
+// @import "mixins/resize";
+// @import "mixins/screen-reader";
+// @import "mixins/size";
+// @import "mixins/reset-text";
+@import "../../../../node_modules/bootstrap/scss/mixins/text-emphasis";
+@import "../../../../node_modules/bootstrap/scss/mixins/text-hide";
+@import "../../../../node_modules/bootstrap/scss/mixins/text-truncate";
+// @import "mixins/visibility";
+
+// // Components
+// @import "mixins/alert";
+@import "../../../../node_modules/bootstrap/scss/mixins/buttons";
+// @import "mixins/caret";
+@import "../../../../node_modules/bootstrap/scss/mixins/pagination";
+@import "../../../../node_modules/bootstrap/scss/mixins/lists";
+// @import "mixins/list-group";
+// @import "mixins/nav-divider";
+// @import "mixins/forms";
+@import "../../../../node_modules/bootstrap/scss/mixins/table-row";
+
+// // Skins
+@import "../../../../node_modules/bootstrap/scss/mixins/background-variant";
+@import "../../../../node_modules/bootstrap/scss/mixins/border-radius";
+@import "../../../../node_modules/bootstrap/scss/mixins/box-shadow";
+@import "../../../../node_modules/bootstrap/scss/mixins/gradients";
+@import "../../../../node_modules/bootstrap/scss/mixins/transition";
+
+// // Layout
+@import "../../../../node_modules/bootstrap/scss/mixins/clearfix";
+@import "../../../../node_modules/bootstrap/scss/mixins/grid-framework";
+@import "../../../../node_modules/bootstrap/scss/mixins/grid";
+// @import "mixins/float";
+
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+
+  or object-fit and object-position:
+  @include object-fit(cover, top);
+*/
+@mixin object-fit($fit: fill, $position: null) {
+  object-fit: $fit;
+  @if $position {
+    font-family: "object-fit: #{$fit}; object-position: #{$position}";
+    object-position: $position;
+  } @else {
+    font-family: "object-fit: #{$fit}";
+  }
+}
+// Fix font-size error when import
+@mixin font-size($fs, $important: false) {
+  // Add !important suffix if needed
+  $suffix: if($important, " !important", "");
+  font-size: #{$fs}#{$suffix};
+}

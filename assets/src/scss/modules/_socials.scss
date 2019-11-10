@@ -1,0 +1,38 @@
+.social {
+  &__link {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    @include media-breakpoint-up(md) {
+      width: 40px;
+      height: 40px;
+    }
+    .icon {
+      max-width: 30px;
+      max-height: 25px;
+      fill: $secondary;
+      @include media-breakpoint-up(md) {
+        max-width: 35px;
+        max-height: 30px;
+      }
+    }
+    @include hover-focus {
+      opacity: 0.5;
+    }
+  }
+  &-fb {
+    background: radial-gradient(67.35px at 50.75% 122.5%, #3d5a99 0%, #3d5a99 30%, #6382c1 100%);
+  }
+  &-inst {
+    background: radial-gradient(59.63px at 42.55% 107.76%, #ffd87a 0%, #fccb76 5.56%, #f5AA6d 17.78%, #e9755e 33.33%, #e46058 38.89%, #c23c8e 64.44%, #5f63ab 100%);
+  }
+  &-in {
+    background: #047cb6;
+  }
+  &-yt {
+    background: $white;
+    .icon {
+      fill:#c21A1f !important;
+    }
+  }
+}

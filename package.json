@@ -1,0 +1,59 @@
+{
+  "name": "prodigident",
+  "title": "ProDigiDent - Free Software for guided surgery",
+  "version": "1.0.0",
+  "description": "Site theme",
+  "keywords": [
+    "semantic",
+    "customizable",
+    "responsive"
+  ],
+  "author": "Savvoff",
+  "homepage": "https://prodigident.com.ua/",
+  "bugs": "",
+  "license": "MIT",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.1.0",
+    "bower": "~1.8.4",
+    "browser-sync": "^2.26.3",
+    "colors": "^1.3.2",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-flatten": "^0.2.0",
+    "gulp-if": "^2.0.0",
+    "gulp-image": "^4.3.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-dart-sass": "^0.9.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-uncss": "^1.0.4",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.6",
+    "merge-stream": "^1.0.0",
+    "motion-ui": "^1.1.0",
+    "run-sequence": "^1.1.5",
+    "wiredep": "^4.0.0",
+    "yargs": "^3.31.0"
+  },
+  "scripts": {
+    "build": "gulp build --production",
+    "production": "gulp --production",
+    "watch": "gulp"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}

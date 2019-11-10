@@ -1,0 +1,34 @@
+.step {
+  &__img {
+    position: relative;
+    top: 0;
+    right: 2px;
+    @include transition(0.5s $ease-out-cubic);
+    svg {
+      width: 100%;
+      height: 50vmin;
+      @include media-breakpoint-up(lg) {
+        height: 35vmin;
+      }
+      @include media-breakpoint-up(xl) {
+        height: 50vmin;
+      }
+      &.active {
+        filter: drop-shadow(0 0 $spacer/2 $primary);
+      }
+    }
+    &:hover {
+      top: $spacer;
+    }
+  }
+  &__caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+  }
+  .rounded-circle {
+    width: 30px;
+    height: 30px;
+  }
+}

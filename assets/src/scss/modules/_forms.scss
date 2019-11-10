@@ -1,0 +1,73 @@
+.form {
+  position: relative;
+  &__input {
+    max-width: 100%;
+    padding: $input-btn-padding-y $input-btn-padding-x/2;
+    border: $border-width solid $border-color;
+    background-color: $white;
+    @include transition(0.5s $ease-out-cubic);
+    &::placeholder {
+      opacity: 0.5;
+      @include transition(0.3s $ease-out-cubic);
+    }
+    @include hover-focus {
+      outline: none;
+      border: $border-width solid $primary;
+      &::placeholder {
+        opacity: 1;
+      }
+    }
+    &[type="checkbox"] {
+     visibility: hidden;
+     z-index: 1;
+     & + span {
+       display: inline-block;
+       width: 20px;
+       height: 20px;
+       border: $border-width solid $border-color;
+     }
+     &:checked + span {
+       &:before {
+         content: '\2713';
+       }
+     }
+    }
+    &[type="radio"].bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      & + span {
+        display: inline-block;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          @include transition(0.3s $ease-out-cubic);
+          z-index: -1;
+        }
+      }
+      &:checked + span {
+        color: $white;
+        &:before {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+  &-submit {
+    min-width: 200px;
+  }
+  .table {
+    td {
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.page-footer {
+  position: relative;
+  &__list {
+    li {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -$spacer * 1.5;
+        margin-top: -6px;
+        border-left: 12px solid $primary;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        @include transition(0.5s $ease-out-cubic);
+      }
+      @include hover {
+        &:before {
+          left: -$spacer;
+        }
+      }
+    }
+    a {
+      color: $black;
+      font-weight: $font-weight-normal;
+      @include hover-focus {
+        color: $primary;
+      }
+    }
+    &_right {
+      @include media-breakpoint-up(sm) {
+        text-align: right;
+      }
+      @extend .page-footer__list;
+      li {
+        &:before {
+          @include media-breakpoint-up(sm) {
+            left: initial;
+            right: -$spacer * 1.5;
+            border-left: none;
+            border-right: 12px solid $primary;
+          }
+        }
+        @include hover {
+          &:before {
+            @include media-breakpoint-up(sm) {
+              left: initial;
+              right: -$spacer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

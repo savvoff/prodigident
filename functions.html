@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#e30613">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <title>ProDigiDent - Free Software for guided surger</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e30613">
+  <link rel="stylesheet" href="/assets/dist/css/app.css">
+</head>
+<body style="overflow: hidden;">
+  <div id="svg-sprites" style="width: 0; height: 0; visibility: hidden;"></div>
+  <div class="loader d-flex flex-column justify-content-center align-items-center">
+    <img src="/assets/dist/images/logo.svg" alt="logo">
+    <div class="loader-spinner"></div>
+  </div>
+  <header class="page-header border-bottom border-primary py-2 py-lg-0">
+    <div class="container-fluid no-gutters">
+      <div class="row justify-content-center no-gutters">
+        <div class="page-header__inner col-12 col-xl-10 d-flex align-items-center">
+          <div class="brand">
+            <a href="/"><svg class="brand-logo mb-n2"><use xlink:href="#logo"></use></svg></a>
+          </div>
+          <nav class="page-header__menu ml-auto">
+            <ul class="d-flex flex-column flex-lg-row list-unstyled m-auto mb-0">
+              <li class="d-inline-flex py-lg-3 active"><a class="m-0" href="#">Implant Planning</a></li>
+              <li class="d-inline-flex py-lg-3"><a class="m-0" href="/functions.html">Functions</a></li>
+              <li class="d-inline-flex py-lg-3"><a class="m-0" href="/downloads.html">Downloads</a></li>
+              <li class="d-inline-flex py-lg-3"><a class="m-0" href="/prices.html">Prices</a></li>
+              <li class="d-inline-flex flex-column py-lg-3">
+                <a class="m-0" href="/education.html">Education</a>
+                <ul class="page-header__menu_dropdown d-flex flex-column list-unstyled">
+                  <li class="d-inline-flex"><a class="m-0" href="/education.html">User Manual</a></li>
+                  <li class="d-inline-flex"><a class="m-0" href="/cases.html">Cases & Articles</a></li>
+                  <li class="d-inline-flex"><a class="m-0" href="/faq.html">F.A.Q</a></li>
+                  <li class="d-inline-flex"><a class="m-0" href="/videos.html">Video</a></li>
+                  <li class="d-inline-flex"><a class="m-0" href="/cases.html">Events</a></li>
+                </ul>
+              </li>
+              <li class="d-inline-flex py-lg-3"><a class="h5 m-0" href="/contacts.html">Contact Us</a></li>
+            </ul>
+            <span class="slide-border d-none d-lg-block"></span>
+          </nav>
+          <button class="burger d-lg-none ml-auto ml-lg-3 my-auto"><span></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="wrapper">
+    <aside class="page-aside">
+      <div class="social d-flex flex-column overflow-hidden shadow rounded bg-light p-2">
+        <a class="social__link social-fb rounded-lg shadow-sm m-1" href="#" target="_blank">
+          <svg class="icon m-auto"><use xlink:href="#facebook"></use></svg>
+        </a>
+        <a class="social__link social-inst rounded-lg shadow-sm m-1" href="#" target="_blank">
+          <svg class="icon m-auto"><use xlink:href="#instagram"></use></svg>
+        </a>
+        <a class="social__link social-in rounded-lg shadow-sm m-1" href="#" target="_blank">
+          <svg class="icon m-auto"><use xlink:href="#linkedin"></use></svg>
+        </a>
+        <a class="social__link social-yt rounded-lg shadow-sm m-1" href="#" target="_blank">
+          <svg class="icon m-auto"><use xlink:href="#youtube"></use></svg>
+        </a>
+      </div>
+    </aside>
+    <section class="page-section py-4 py-xl-6">
+      <div class="particles" id="particles0" style="--rotation: 25deg; --posX: 30%; --posY: -50%"></div>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-5 order-1 order-lg-0">
+            <h3 class="page-section__title text-secondary mb-4">Creation Of Any Kinds Of <span>Surgical Guides</span></h3>
+            <p class="mb-3">Create any types of surgical guides by means of ImplaStation - based on teeth, mucosa,
+              bone, or combined, as well as guides according to a special protocol for the double
+              scanning technique</p>
+          </div>
+          <div class="col-12 col-lg-5 order-0 order-lg-1">
+            <svg class="brand-text w-100 mw-100 mt-sm-2 mt-lg-n2 mb-4"><use xlink:href="#logo-text"></use></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section">
+      <svg class="brand-text_alt d-none d-xl-block" style="width: 10%;"><use xlink:href="#logo-text-alt"></use></svg>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 text-center text-md-left">
+            <p class="page-section__title_active h1">Working With DICOM Files</p>
+          </div>
+          <div class="col-12 col-lg-10">
+            <div class="row my-3 my-sm-5 text-center">
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <!-- Если  data-lightbox одиннакова у разных картинок, то будет слайдер -->
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <a class="thumb img-fit mb-0 px-4 mx-4" href="//i.gifer.com/yH.gif" data-lightbox="image-1" data-title="My caption">
+                    <img class="thumb__img" src="/assets/dist/images/func1.jpg" alt="func">
+                  </a>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">DICOM, DICOMDIR</p>
+                    <p class="text-secondary mb-4 px-3">Open your DICOM files and directories of any types</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <a class="thumb img-fit mb-0 px-4 mx-4" href="//placeimg.com/1100/800/any" data-lightbox="image-2" data-title="My caption 2">
+                    <img class="thumb__img" src="/assets/dist/images/func2.jpg" alt="func">
+                  </a>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">DICOM convertion</p>
+                    <p class="text-secondary mb-4 px-3">
+                    Convert DICOM files to STL easily and conveniently taking into account the optical density adjustment</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/func3.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">DICOM segmentation</p>
+                    <p class="text-secondary mb-4 px-3">Convert DICOM to STL with manual or semi-automatic reconstructed surface correction</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/func4.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">DICOM cutting</p>
+                    <p class="text-secondary mb-4 px-3">Crop unnecessary areas of the DICOM file along a curved path</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/func5.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Double scan technology</p>
+                    <p class="text-secondary mb-4 px-3">Create guides using double scanninng technology (stl-surfaces creating and processing from (or on the basis of)...</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section">
+      <div class="particles" id="particles1" style="--rotation: 30deg; --posX: -35%; --posY: 60%"></div>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 text-center text-md-left">
+            <p class="page-section__title_active h1">Working With DICOM Files</p>
+          </div>
+           <div class="col-12 col-lg-10">
+            <div class="row my-3 my-sm-5 text-center">
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/func-1.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Panoramic and MPR modes</p>
+                    <p class="text-secondary mb-4 px-3">View your project in a suitable mode: panoramic or MPR. Build several different panoramic curves</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/func-2.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Rotating slice view</p>
+                    <p class="text-secondary mb-4 px-3">
+                        Check the tissue around the virtual implant in the rotating slice window</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/func-3.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Simple and convenient navigation</p>
+                    <p class="text-secondary mb-4 px-3">Enjoy intuitive control, rotate the viewing axes, move the axes quickly or align the viewing axes with the implant axis by double-clicking</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 text-center text-md-left">
+            <p class="page-section__title_active h1">Drilling Planning</p>
+          </div>
+           <div class="col-12 col-lg-10">
+            <div class="row my-3 my-sm-5 text-center">
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/fun1.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Drilling Planning Manager</p>
+                    <p class="text-secondary mb-4 px-3">Control all parameters when planning
+                        drilling - the dimensions of the implant,
+                        guided sleeves, drills and special settings...</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/fun2.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">V - factor</p>
+                    <p class="text-secondary mb-4 px-3">
+                        Implement simple and visual control of the V-factor parameter. The controlled drill apex shift relatively to the implant apex...</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/fun3.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Working with tool kits</p>
+                    <p class="text-secondary mb-4 px-3">Add the necessary tool kit for guided surgery to ImplaStation, as well as the drilling sequence information...</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section">
+      <div class="particles" id="particles2" style="--rotation: 30deg; --posX: -35%; --posY: 60%"></div>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 text-center text-md-left">
+            <p class="page-section__title_active h1">Flexible Element Library</p>
+          </div>
+           <div class="col-12 col-lg-10">
+            <div class="row my-3 my-sm-5 text-center">
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/func_1.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Refillable libraries</p>
+                    <p class="text-secondary mb-4 px-3">Create your own element libraries or
+                        replenish exhisting libraries by new
+                        elements (either custom or real STL files)</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/func_2.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Custom mode</p>
+                    <p class="text-secondary mb-4 px-3">
+                        Create custom shape of any element - implant, abutment, guided sleeve with or without stopper, fixing pin</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/func_3.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Any sleeves and subtraction body</p>
+                    <p class="text-secondary mb-4 px-3">Add to the library sleeves of any shape and subtraction body for them</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 text-center text-md-left">
+            <p class="page-section__title_active h1">Planning The Rotational...</p>
+          </div>
+           <div class="col-12 col-lg-10">
+            <div class="row my-3 my-sm-5 text-center">
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/fun_1.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Sleevs and implants rotation</p>
+                    <p class="text-secondary mb-4 px-3">Rotate the implant, abutment, sleeve.
+                        Indicate the progressive step of the rotation angle (it is relevant for cases...</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/fun_2.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Working with implants with inclined platform</p>
+                    <p class="text-secondary mb-4 px-3">
+                        Work with implants with inclined platform. The software takes into account two...</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/fun_3.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Step of implant rotation</p>
+                    <p class="text-secondary mb-4 px-3">For cases where the implant rotational position is important, the rotation of the abutment relative...</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <section class="page-section">
+      <div class="particles" id="particles3" style="--rotation: -30deg; --posX: 30%; --posY: 60%"></div>
+      <svg class="brand-text_alt d-none d-xl-block" style="width: 10%;"><use xlink:href="#logo-text-alt"></use></svg>
+      <div class="container-fluid">
+        <div class="row justify-content-center" data-aos="fade-right">
+          <div class="col-12 col-lg-10 text-center text-md-left">
+            <p class="page-section__title_active h1">Working With STL</p>
+          </div>
+          <div class="col-12 col-lg-10" data-aos="fade-up">
+            <div class="row my-3 my-sm-5 text-center">
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/funсt1.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">STL surfaces splitting</p>
+                    <p class="text-secondary mb-4 px-3">Split STL-surfaces into two surfaces on a path curve</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/funсt2.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">STL cutting</p>
+                    <p class="text-secondary mb-4 px-3">Cut STL-surfaces on a path curve.
+                        In this way, for example, you can virtually remove the tooth crown</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/funсt3.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Surface treatment</p>
+                    <p class="text-secondary mb-4 px-3">Heal STL surface from holes and triangles with wrong design</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 my-3">
+                <div class="card d-flex flex-column justify-content-between border border-primary bg-white py-3">
+                  <figure class="thumb img-fit mb-0 px-4 mx-4">
+                    <img class="thumb__img" src="/assets/dist/images/funсt4.jpg" alt="func">
+                  </figure>
+                  <hr class="border-top border-primary mb-auto">
+                  <div class="my-auto">
+                    <p class="text-primary font-weight-bold px-4 my-3">Export to CAD software</p>
+                    <p class="text-secondary mb-4 px-3">Unload any virtual elements from
+                        ImplaStation. Save their relative
+                        coordinates. For example, for...</p>
+                    <a class="h6 font-weight-normal" href="">View more...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer pt-3" data-aos="fade-in">
+    <div class="social d-flex justify-content-center bg-secondary py-2">
+      <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
+        <svg class="icon m-auto"><use xlink:href="#facebook"></use></svg>
+      </a>
+      <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
+        <svg class="icon m-auto"><use xlink:href="#instagram"></use></svg>
+      </a>
+      <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
+        <svg class="icon m-auto"><use xlink:href="#youtube"></use></svg>
+      </a>
+      <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
+        <svg class="icon m-auto"><use xlink:href="#linkedin"></use></svg>
+      </a>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="row my-3">
+            <div class="d-flex justify-content-center col-12 col-sm-6 col-md-4 col-xl-3 order-1 order-md-0">
+              <ul class="page-footer__list list-unstyled mt-3">
+                <li class="mb-2"><a class="h5" href="#">Implant Planning</a></li>
+                <li class="mb-2"><a class="h5" href="#">Functions</a></li>
+                <li class="mb-2"><a class="h5" href="#">Downloads</a></li>
+                <li class="mb-2"><a class="h5" href="#">Prices</a></li>
+                <li class="mb-2"><a class="h5" href="#">Education</a></li>
+                <li class="mb-2"><a class="h5" href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column border-md-x border-primary col-12 col-md-4 col-xl-6 text-center order-0 order-md-1">
+              <svg class="brand-text w-100 mx-auto"><use xlink:href="#logo-text"></use></svg>
+              <p class="text-dark-light my-2">Dental Implant Planning Software</p>
+              <div class="text-condensed mt-auto">
+                <h6 class="font-weight-normal">Ekaterinenskaya sq 8<br>Odessa, Ukraine</h6>
+                <a class="h5 d-block font-weight-normal py-1" href="tel:+38 067 787 11 00">+38 067 787 11 00</a>
+                <a class="h6 d-block font-weight-normal text-dark" href="mailto:prodigident@gmail.com">prodigident@gmail.com</a>
+              </div>
+            </div>
+            <button class="footer-toggler btn btn-primary btn-block d-block d-md-none my-3">Toogle menu</button>
+            <div class="d-flex justify-content-center col-12 col-sm-6 col-md-4 col-xl-3 order-2">
+              <ul class="page-footer__list_right list-unstyled mt-3">
+                <li class="mb-2"><a class="h5" href="#">Get ImplaStation for Free</a></li>
+                <li class="mb-2"><a class="h5" href="#">Create Surgical Guide</a></li>
+                <li class="mb-2"><a class="h5" href="#">Make Any Guide</a></li>
+                <li class="mb-2"><a class="h5" href="#">More Advanced Functions</a></li>
+                <li class="mb-2"><a class="h5" href="#">Upcomming Events</a></li>
+                <li class="mb-2"><a class="h5" href="#">Order The Guide</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="social border-top border-primary text-center bg-dark p-2">
+      <div class="d-inline-block text-white">
+        <a class="h6 font-weight-normal text-white text-truncate mx-1 mb-0" href="#">Privacy Policy</a> |
+        <a class="h6 font-weight-normal text-white text-truncate mx-1 mb-0" href="#">Cookies Policy</a> |
+        <a class="h6 font-weight-normal text-white text-truncate mx-1 mb-0" href="#">Terms Of Use</a> |
+        <a class="h6 font-weight-normal text-white text-truncate mx-1 mb-0" href="#">Quality Policy</a>
+      </div>
+      <p class="h6 font-weight-normal text-dark-light py-1 mx-1 mb-0">&copy; 2016 - <span id="year"></span> ImplaStation | ProDigiDent. All Rights Reserved</p>
+      <script>document.getElementById('year').innerText = new Date().getFullYear()</script>
+    </div>
+  </footer>
+  <button class="btn btn-to-top p-0" type="button">
+    <svg class="arrow"><use xlink:href="#up-arrow"></use></svg>
+  </button>
+  <script type="text/javascript" src="/assets/dist/javascript/app.js"></script>
+</body>
+</html>

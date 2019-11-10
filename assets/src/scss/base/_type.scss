@@ -1,0 +1,106 @@
+// stylelint-disable declaration-no-important, selector-list-comma-newline-after
+
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+h1, .h1 {
+  font-size: $h2-font-size;
+  font-size: calc-fluid-font-size(24, 48, 320, 1200);
+  @include media-breakpoint-up(xl) {
+    font-size: $h1-font-size;
+    font-size: calc-fluid-font-size(48, 60, 1200, 1920);
+  }
+}
+
+h2, .h2 {
+  font-size: $h3-font-size;
+  font-size: calc-fluid-font-size(24, 32, 320, 1200);
+  @include media-breakpoint-up(xl) {
+    font-size: $h2-font-size;
+    font-size: calc-fluid-font-size(32, 36, 1200, 1920);
+  }
+}
+
+h3, .h3 {
+  font-size: $h4-font-size;
+  font-size: calc-fluid-font-size(16, 26, 320, 1200);
+  @include media-breakpoint-up(xl) {
+    font-size: $h3-font-size;
+    font-size: calc-fluid-font-size(26, 32, 1200, 1920);
+  }
+}
+
+h4, .h4 {
+  font-size: $h5-font-size!important;
+  @include media-breakpoint-up(xl) {
+    font-size: $h4-font-size!important;
+  }
+}
+
+h5, .h5 {
+  font-size: $h6-font-size!important;
+  @include media-breakpoint-up(xl) {
+    font-size: $h5-font-size!important;
+  }
+}
+
+h6, .h6 {
+  font-size: $h6-font-size!important;
+}
+
+//
+// Horizontal rules
+//
+
+hr {
+  margin-top: $hr-margin-y;
+  margin-bottom: $hr-margin-y;
+  border: 0;
+  border-top: $hr-border-width solid $hr-border-color;
+}
+
+
+//
+// Emphasis
+//
+
+small, .small {
+  font-size: $font-size-base / 1.25;
+  font-weight: $font-weight-normal;
+}
+
+mark, .mark {
+  padding: $mark-padding;
+  background-color: $mark-bg;
+}
+
+
+//
+// Lists
+//
+
+.list-unstyled {
+  @include list-unstyled;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled;
+}
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $list-inline-padding;
+  }
+}
