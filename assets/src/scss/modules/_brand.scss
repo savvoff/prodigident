@@ -2,8 +2,11 @@
   position: relative;
   z-index: 1;
   &-logo {
-    max-width: 200px;
+    max-width: 150px;
     max-height: 50px;
+    @include media-breakpoint-up(sm) {
+      max-width: 200px;
+    }
   }
   &-text {
     max-width: 60%;
