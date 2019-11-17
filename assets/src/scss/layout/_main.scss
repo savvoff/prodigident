@@ -32,6 +32,12 @@
       }
     }
   }
+  .icon {
+    &-event {
+      max-width: 40px;
+      max-height: 50px;
+    }
+  }
 }
 .log-in {
   max-width: 20px;

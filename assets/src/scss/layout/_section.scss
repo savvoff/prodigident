@@ -24,7 +24,7 @@
       &:before {
         content: '';
         position: absolute;
-        top: 50%;
+        top: $spacer / 1.5;
         left: -$spacer * 1.5;
         margin-top: -6px;
         border-left: 12px solid $primary;
@@ -131,6 +131,11 @@
         bottom: -15%;
         width: 35%;
       }
+    }
+  }
+  &.lectors {
+    img {
+      max-height: 400px;
     }
   }
 }
