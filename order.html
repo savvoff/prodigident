@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="theme-color" content="#ffffff">
   <meta name="msapplication-TileColor" content="#e30613">
   <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <title>ProDigiDent - Free Software for guided surger</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -14,7 +16,9 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e30613">
   <link rel="stylesheet" href="/assets/dist/css/app.css">
+  <script type="text/javascript" src="https://implastation.com/cdn/js/polyfiller.js"></script>
 </head>
+
 <body style="overflow: hidden;">
   <div id="svg-sprites" style="width: 0; height: 0; visibility: hidden;"></div>
   <div class="loader d-flex flex-column justify-content-center align-items-center">
@@ -26,7 +30,9 @@
       <div class="row justify-content-center no-gutters">
         <div class="page-header__inner col-12 col-xl-10 d-flex align-items-center">
           <div class="brand">
-            <a href="/"><svg class="brand-logo mb-n2"><use xlink:href="#logo"></use></svg></a>
+            <a href="/"><svg class="brand-logo mb-n2">
+                <use xlink:href="#logo"></use>
+              </svg></a>
           </div>
           <nav class="page-header__menu ml-auto">
             <ul class="d-flex flex-column flex-lg-row list-unstyled m-auto mb-0">
@@ -48,12 +54,19 @@
             </ul>
             <span class="slide-border d-none d-lg-block"></span>
           </nav>
-          <div class="langs py-lg-4 ml-auto ml-lg-0">
+          <div class="langs py-lg-4 ml-auto ml-lg-4">
             <h5 class="text-primary text-uppercase m-0">RU</h5>
             <ul class="langs_dropdown d-flex flex-column list-unstyled">
               <li class="d-inline-flex"><a class="m-0" href="#">UA</a></li>
               <li class="d-inline-flex"><a class="m-0" href="#">EN</a></li>
             </ul>
+          </div>
+          <div class="position-relative mt-n1 ml-3">
+            <a href="#">
+              <svg class="log-in">
+                <use xlink:href="#user"></use>
+              </svg>
+            </a>
           </div>
           <button class="burger d-lg-none ml-4 my-auto"><span></span></button>
         </div>
@@ -64,265 +77,502 @@
     <aside class="page-aside">
       <div class="social d-flex flex-column overflow-hidden shadow rounded bg-light p-2">
         <a class="social__link social-fb rounded-lg shadow-sm m-1" href="#" target="_blank">
-          <svg class="icon m-auto"><use xlink:href="#facebook"></use></svg>
+          <svg class="icon m-auto">
+            <use xlink:href="#facebook"></use>
+          </svg>
         </a>
         <a class="social__link social-inst rounded-lg shadow-sm m-1" href="#" target="_blank">
-          <svg class="icon m-auto"><use xlink:href="#instagram"></use></svg>
+          <svg class="icon m-auto">
+            <use xlink:href="#instagram"></use>
+          </svg>
         </a>
         <a class="social__link social-in rounded-lg shadow-sm m-1" href="#" target="_blank">
-          <svg class="icon m-auto"><use xlink:href="#linkedin"></use></svg>
+          <svg class="icon m-auto">
+            <use xlink:href="#linkedin"></use>
+          </svg>
         </a>
         <a class="social__link social-yt rounded-lg shadow-sm m-1" href="#" target="_blank">
-          <svg class="icon m-auto"><use xlink:href="#youtube"></use></svg>
+          <svg class="icon m-auto">
+            <use xlink:href="#youtube"></use>
+          </svg>
         </a>
       </div>
     </aside>
     <section class="page-section py-4 py-xl-6">
-        <div class="particles" id="particles0" style="--rotation: 25deg; --posX: 30%; --posY: -50%"></div>
-        <div class="container-fluid">
-          <div class="row justify-content-center" data-aos="fade-right">
-            <div class="col-12 col-lg-10">
-              <p class="page-section__title_active h1">Order</p>
-            </div>
-            <div class="col-12 col-lg-10 col-xl-8" data-aos="fade-up">
-              <p class="page-section__title font-weight-normal mt-5 mb-4">To send us your feedback, please fill the form below!</p>
-              <div class="card border border-primary bg-white h-auto p-5">
-                <div class="form row">
-                  <div class="col-12">
-                    <div class="d-flex align-items-center w-100">
-                      <input class="form__input w-100 mb-3" type="text" placeholder="Name:">
-                    </div>
+      <div class="particles" id="particles0" style="--rotation: 25deg; --posX: 30%; --posY: -50%"></div>
+      <div class="container-fluid">
+        <div class="row justify-content-center" data-aos="fade-right">
+          <div class="col-12 col-lg-10">
+            <p class="page-section__title_active h1">Order</p>
+          </div>
+          <div class="col-12 col-lg-10 col-xl-8" data-aos="fade-up">
+            <p class="page-section__title font-weight-normal mt-5 mb-4">To send us your feedback, please fill the form
+              below!</p>
+            <div class="card border border-primary bg-white h-auto p-5">
+              <div class="form row">
+                <div class="col-12">
+                  <div class="d-flex align-items-center w-100">
+                    <input class="form__input w-100 mb-3" name="doc_name" type="text"
+                      placeholder="Doctor's name/Laboratory" required>
                   </div>
-                  <div class="col-12 d-md-flex">
-                    <div class="d-flex align-items-center w-100 mr-md-3">
-                      <input class="form__input w-100 mb-3" type="text" placeholder="Phone:" title="Phone format +380">
-                    </div>
-                    <div class="d-flex align-items-center w-100">
-                      <input class="form__input w-100 mb-3" type="email" placeholder="E-mail:">
-                    </div>
+                </div>
+                <div class="col-12 d-md-flex">
+                  <div class="d-flex align-items-center w-100 mr-md-3">
+                    <input class="form__input w-100 mb-3" name="phone" type="tel" placeholder="Phone:"
+                      title="Phone format +380" required>
                   </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center w-100">
-                      <input class="form__input w-100 mb-3" type="text" placeholder="Address:">
-                    </div>
-                    <div class="d-flex align-items-center w-100">
-                      <input class="form__input w-100 mb-3" type="text" placeholder="Pacient:">
-                    </div>
+                  <div class="d-flex align-items-center w-100">
+                    <input class="form__input w-100 mb-3" id="email" name="email" type="email" placeholder="Email"
+                      required>
                   </div>
-                  <div class="col-12">
-                    <div class="d-flex align-items-center w-100">
-                      <textarea class="form__input w-100 mb-3" rows="4" placeholder="Enter your message here"></textarea>
-                    </div>
-                    <table class="table table-bordered text-center">
-                      <h4 class="text-white bg-primary p-3">Additionals to order:</h4>
-                      <thead>
-                        <tr>
-                          <th scope="col"></th>
-                          <th scope="col" colspan="2">First</th>
-                          <th scope="col" colspan="2">Second</th>
-                          <th scope="col" colspan="2">Third</th>
-                          <th scope="col" colspan="2">Fourth</th>
-                          <th scope="col">Fifth</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group1"><span>R</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group1"><span>D</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group2"><span>R</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group2"><span>D</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group3"><span>R</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group3"><span>D</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group4"><span>R</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group4"><span>D</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group9"><span>R</span></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group5"><span>R</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group5"><span>D</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group6"><span>R</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group6"><span>D</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group7"><span>R</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group7"><span>D</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group8"><span>R</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group8"><span>D</span></td>
-                          <td><input class="form__input bg" data-check="false" type="radio" name="group10"><span>D</span></td>
-                        </tr>
-                        <tr>
-                          <td colspan="10">Marked objects: (R) - physical, (D) - digital</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <div class="d-flex align-items-center w-100">
-                      <textarea class="form__input w-100 mb-3" rows="5">Test message
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center w-100">
+                    <input class="form__input w-100 mb-3" name="adress" type="text" placeholder="Delivery address">
+                  </div>
+                  <div class="d-flex align-items-center w-100">
+                    <input class="form__input w-100 mb-3" name="patient" type="text" placeholder="Patient's name">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center w-100">
+                    <textarea class="form__input w-100 mb-3" name="doc_comment" rows="6"
+                      placeholder="Comments"></textarea>
+                  </div>
+                  <table class="table table-bordered text-center">
+                    <h4 class="text-white bg-primary p-3">Delivery check-list:</h4>
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col" colspan="2">Impression</th>
+                        <th scope="col" colspan="2">Model</th>
+                        <th scope="col" colspan="2">Wax-Up</th>
+                        <th scope="col" colspan="2">Denture</th>
+                        <th scope="col">Bite</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Upper</th>
+                        <td><input class="form__input bg" type="radio" name="radio1" value="R"><span>R</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio1" value="D"><span>D</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio2" value="R"><span>R</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio2" value="D"><span>D</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio3" value="R"><span>R</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio3" value="D"><span>D</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio4" value="R"><span>R</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio4" value="D"><span>D</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio9" value="R"><span>R</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Lower</th>
+                        <td><input class="form__input bg" type="radio" name="radio5" value="R"><span>R</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio5" value="D"><span>D</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio6" value="R"><span>R</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio6" value="D"><span>D</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio7" value="R"><span>R</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio7" value="D"><span>D</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio8" value="R"><span>R</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio8" value="D"><span>D</span></td>
+                        <td><input class="form__input bg" type="radio" name="radio9" value="D"><span>D</span></td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="10">Mark object: (R) - real object, (D) - digital object</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                  <div class="d-flex align-items-center w-100">
+                    <textarea class="form__input w-100 mb-3" rows="6" name="delivery_comments" placeholder="Comments
 
-                        1) Test 1
-                        2) Test 2
-                      </textarea>
+                      Please specify:
+                          1) for reall objects - delivery method;
+                          2) for  digital objects - the link for download;"></textarea>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center w-100">
+                    <label class="h5 d-inline-flex align-items-center font-weight-normal" for="proj">Create a project
+                      <input class="form__input" id="proj" name="DCL1" type="checkbox" value="1"><span
+                        class="mx-2 ml-n2"></span></label> <br>
+                  </div>
+                  <div class="accordion ml-4 my-3">
+                    <div class="accordion__tab">
+                      <div class="accordion__group d-flex align-items-center py-1">
+                        <p class="accordion__title w-100 px-3 mb-0">Virtual Teeth Position</p>
+                      </div>
+                      <div class="accordion__content border border-primary border-top-0 p-3">
+                        <table class="table table-bordered text-center">
+                          <thead>
+                            <tr>
+                              <th class="font-weight-normal" scope="col" colspan="16">
+                                <input class="form__input mx-2" type="radio" name="DCL2" value="1">Digital wax-up
+                                simplified
+                                <input class="form__input mx-2" type="radio" name="DCL3" value="1" disabled>Digital
+                                wax-up in occlusion
+                                <label class="h5 d-inline-flex align-items-center font-weight-normal" for="check1">
+                                  <input class="form__input" type="checkbox" id="check1" name="DCL4" value="1"><span
+                                    class="mx-2 ml-n2"></span>Create a project</label>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input class="form__input bg" type="radio" name="vtp_18" value="1"><span>18</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_17" value="1"><span>17</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_16" value="1"><span>16</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_15" value="1"><span>15</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_14" value="1"><span>14</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_13" value="1"><span>13</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_12" value="1"><span>12</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_11" value="1"><span>11</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_21" value="1"><span>21</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_22" value="1"><span>22</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_23" value="1"><span>23</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_24" value="1"><span>24</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_25" value="1"><span>25</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_26" value="1"><span>26</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_27" value="1"><span>27</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_28" value="1"><span>28</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><input class="form__input bg" type="radio" name="vtp_48" value="1"><span>48</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_47" value="1"><span>47</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_46" value="1"><span>46</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_45" value="1"><span>45</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_44" value="1"><span>44</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_43" value="1"><span>43</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_42" value="1"><span>42</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_41" value="1"><span>41</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_31" value="1"><span>31</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_32" value="1"><span>32</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_33" value="1"><span>33</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_34" value="1"><span>34</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_35" value="1"><span>35</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_36" value="1"><span>36</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_37" value="1"><span>37</span>
+                              </td>
+                              <td><input class="form__input bg" type="radio" name="vtp_38" value="1"><span>38</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center w-100">
-                      <label class="h5 d-inline-flex align-items-center font-weight-normal" for="proj">Create a project
-                      <input class="form__input" type="checkbox" id="proj"><span class="mx-2 ml-n2"></span></label> <br>
-                    </div>
-                    <div class="accordion ml-4 my-3">
-                        <div class="accordion__tab">
-                          <div class="accordion__group d-flex align-items-center py-1">
-                            <p class="accordion__title w-100 px-3 mb-0">From where can I download the program?</p>
-                          </div>
-                          <div class="accordion__content border border-primary border-top-0 px-3">
-                            <table class="table table-bordered text-center">
-                              <thead>
-                                <tr>
-                                  <th class="font-weight-normal" scope="col" colspan="16">
-                                    <input class="form__input mx-2" type="radio" name="group12">Test1
-                                    <input class="form__input mx-2" type="radio" name="group12">Test2
-                                    <label class="h5 d-inline-flex align-items-center font-weight-normal" for="check1">
-                                    <input class="form__input" type="checkbox" id="check1"><span class="mx-2 ml-n2"></span>Create a project</label>
-                                  </th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch1"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch2"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch3"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch4"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch5"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch6"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch7"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch8"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch9"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch10"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch11"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch12"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch13"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch14"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch15"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch16"><span>R</span></td>
-                                </tr>
-                                <tr>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch17"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch18"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch19"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch20"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch21"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch22"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch23"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch24"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch25"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch26"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch27"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch28"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch29"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch30"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch31"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch32"><span>R</span></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
+                    <div class="accordion__tab">
+                      <div class="accordion__group d-flex align-items-center py-1">
+                        <p class="accordion__title w-100 px-3 mb-0">Implant Position</p>
+                      </div>
+                      <div class="accordion__content border border-primary border-top-0 p-3">
+                        <table class="table table-bordered text-center">
+                          <tbody>
+                            <td><input class="form__input bg" type="radio" name="ip_18" value="1"><span>18</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_17" value="1"><span>17</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_16" value="1"><span>16</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_15" value="1"><span>15</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_14" value="1"><span>14</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_13" value="1"><span>13</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_12" value="1"><span>12</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_11" value="1"><span>11</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_21" value="1"><span>21</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_22" value="1"><span>22</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_23" value="1"><span>23</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_24" value="1"><span>24</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_25" value="1"><span>25</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_26" value="1"><span>26</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_27" value="1"><span>27</span></td>
+                            <td><input class="form__input bg" type="radio" name="ip_28" value="1"><span>28</span></td>
+                            </tr>
+                            <tr>
+                              <td><input class="form__input bg" type="radio" name="ip_48" value="1"><span>48</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_47" value="1"><span>47</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_46" value="1"><span>46</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_45" value="1"><span>45</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_44" value="1"><span>44</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_43" value="1"><span>43</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_42" value="1"><span>42</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_41" value="1"><span>41</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_31" value="1"><span>31</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_32" value="1"><span>32</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_33" value="1"><span>33</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_34" value="1"><span>34</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_35" value="1"><span>35</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_36" value="1"><span>36</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_37" value="1"><span>37</span></td>
+                              <td><input class="form__input bg" type="radio" name="ip_38" value="1"><span>38</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="d-flex align-items-center w-100">
+                          <label>Implant system: <input class="form__input w-100 mb-3" name="implant_system" type="text"
+                              placeholder="Type here the implant system you prefer"></label>
                         </div>
-                        <div class="accordion__tab">
-                          <div class="accordion__group d-flex align-items-center py-1">
-                            <p class="accordion__title w-100 px-3 mb-0">How much does the software cost?</p>
+                        <div class="row">
+                          <div class="d-flex flex-column col-12 col-md-6">
+                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check2">
+                              <input class="form__input" type="checkbox" name="screw_retained" value="1"
+                                id="check2"><span class="mx-2 ml-n2"></span>Screw retained</label>
+                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check3">
+                              <input class="form__input" type="checkbox" name="locator_ball_abutment" value="1"
+                                id="check3"><span class="mx-2 ml-n2"></span> Locator or Ball abutment</label>
                           </div>
-                          <div class="accordion__content border border-primary border-top-0 px-3">
-                            <table class="table table-bordered text-center">
-                              <tbody>
-                                <tr>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch1"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch2"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch3"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch4"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch5"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch6"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch7"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch8"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch9"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch10"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch11"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch12"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch13"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch14"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch15"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch16"><span>R</span></td>
-                                </tr>
-                                <tr>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch17"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch18"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch19"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch20"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch21"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch22"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch23"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch24"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch25"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch26"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch27"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch28"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch29"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch30"><span>R</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch31"><span>D</span></td>
-                                  <td><input class="form__input bg" data-check="false" type="radio" name="ch32"><span>R</span></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <div class="d-flex align-items-center w-100">
-                              <label>Implant system: <input class="form__input w-100 mb-3" type="text" placeholder="Type here the implant system you prefer"></label>
-                            </div>
-                            <div class="d-flex align-items-center w-100">
-                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check2">
-                              <input class="form__input" type="checkbox" id="check2"><span class="mx-2 ml-n2"></span>Create a project</label>
-                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check3">
-                              <input class="form__input" type="checkbox" id="check3"><span class="mx-2 ml-n2"></span>Create a project</label>
-                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check4">
-                              <input class="form__input" type="checkbox" id="check4"><span class="mx-2 ml-n2"></span>Create a project</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="accordion__tab">
-                          <div class="accordion__group d-flex align-items-center py-1">
-                            <p class="accordion__title w-100 px-3 mb-0">What are the system requirements for the program?</p>
-                          </div>
-                          <div class="accordion__content border border-primary border-top-0 px-3">
-                            <p class="accordion__text py-1 mb-0">Answer</p>
-                          </div>
-                        </div>
-                        <div class="accordion__tab">
-                          <div class="accordion__group d-flex align-items-center py-1">
-                            <p class="accordion__title w-100 px-3 mb-0">Will the program work on other computers, for example with a built-in video card?</p>
-                          </div>
-                          <div class="accordion__content border border-primary border-top-0 px-3">
-                            <p class="accordion__text py-1 mb-0">Answer</p>
+                          <div class="d-flex flex-column col-12 col-md-6">
+                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check4">
+                              <input class="form__input" type="checkbox" name="open_sinus_lifting" value="1"
+                                id="check4"><span class="mx-2 ml-n2"></span> Plan implantation for a possible open sinus
+                              lifting</label>
+                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check5">
+                              <input class="form__input" type="checkbox" name="closed_sinus_lifting" value="1"
+                                id="check5"><span class="mx-2 ml-n2"></span> Plan implantation for a possible closed
+                              sinus lifting</label>
+                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check6">
+                              <input class="form__input" type="checkbox" name="bone_augmentation" value="1"
+                                id="check6"><span class="mx-2 ml-n2"></span> Plan implantation for a possible bone
+                              augmentation</label>
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="accordion__tab">
+                      <div class="accordion__group d-flex align-items-center py-1">
+                        <p class="accordion__title w-100 px-3 mb-0">Virtual abutment placement:</p>
+                      </div>
+                      <div class="accordion__content border border-primary border-top-0 p-3">
+                        <p class="accordion__text py-1 mb-0">
+                          <div class="row">
+                            <div class="d-flex flex-column col-12 col-md-6">
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check7">
+                                <input class="form__input" type="checkbox" name="standart_abutment" value="1"
+                                  id="check7"><span class="mx-2 ml-n2"></span>Standart abutment</label>
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check8">
+                                <input class="form__input" type="checkbox" name="individual_abutment" value="1"
+                                  id="check8"><span class="mx-2 ml-n2"></span>Individual abutment</label>
+                            </div>
+                            <div class="d-flex flex-column col-12 col-md-6">
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check9">
+                                <input class="form__input" type="checkbox" name="multiunit_abutment" value="1"
+                                  id="check9"><span class="mx-2 ml-n2"></span> Multiunit abutment</label>
+                            </div>
+                          </div>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accordion__tab">
+                      <div class="accordion__group d-flex align-items-center py-1">
+                        <p class="accordion__title w-100 px-3 mb-0">Apply fixation pins:</p>
+                      </div>
+                      <div class="accordion__content border border-primary border-top-0 p-3">
+                        <p class="accordion__text py-1 mb-0">
+                          <div class="d-flex align-items-center w-100">
+                            <label>Pin system: <input class="form__input w-100 mb-3" name="pin_system"
+                                type="text" placeholder="Type here the pin system you prefer"></label>
+                          </div>
+                          <div class="d-flex align-items-center w-100">
+                            <label>Pin quantity: <input class="form__input w-100 mb-3" name="pin_quantity"
+                                type="text" placeholder="Type here pin quantity"></label>
+                          </div>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accordion__tab">
+                      <div class="accordion__group d-flex align-items-center py-1">
+                        <p class="accordion__title w-100 px-3 mb-0">Digital sleeves and drill placement:</p>
+                      </div>
+                      <div class="accordion__content border border-primary border-top-0 p-3">
+                        <p class="accordion__text py-1 mb-0">
+                          <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check10">
+                            <input class="form__input" type="checkbox" name="sleeve_positioning" value="1"
+                              id="check10"><span class="mx-2 ml-n2"></span>Sleeve positioning</label>
+                          <div class="d-flex align-items-center w-100">
+                            <label>Sleeve system: <input class="form__input w-100 mb-3" name="sleeve_system"
+                                type="text" placeholder="Type here the sleeve system you prefer"></label>
+                          </div>
+                          <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check11">
+                              <input class="form__input" type="checkbox" name="sleeve_over_the_gum" value="1"
+                                id="check11"><span class="mx-2 ml-n2"></span>Plan the position of the sleeve over the gum</label>
+                          <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check12">
+                              <input class="form__input" type="checkbox" name="sleeve_under_the_gum" value="1"
+                                id="check12"><span class="mx-2 ml-n2"></span>Plan the sleeve position under the gum</label>
+                          <div class="d-flex align-items-center w-100">
+                            <label>Drill system: <input class="form__input w-100 mb-3" name="drill_system"
+                                type="text" placeholder="Type here the drill system you prefer"></label>
+                          </div>
+                          <div class="d-flex align-items-center w-100">
+                              <textarea class="form__input w-100 mb-3" name="drill_comment" rows="6" placeholder="Comments:"></textarea>
+                            </div>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="accordion__tab">
+                      <div class="accordion__group d-flex align-items-center py-1">
+                        <p class="accordion__title w-100 px-3 mb-0">Surgical guides creation:</p>
+                      </div>
+                      <div class="accordion__content border border-primary border-top-0 p-3">
+                        <p class="accordion__text py-1 mb-0">
+                          <div class="d-flex align-items-center w-100">
+                            <label>Send me a digital project for approval before the date: <input id="date" class="form__input w-100 mb-3" name="sleeve_system"
+                              type="date" name="date" placeholder="Type here the sleeve system you prefer"></label>
+                            <script>
+                                var date = new Date();
+                                var month = date.getMonth()+1;
+                                document.getElementById('date').min = date.getFullYear()+'-'+month+'-'+date.getDate();
+                            </script>
+                          </div>
+                            <div class="d-flex flex-column">
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check13">
+                                <input class="form__input" type="checkbox" name="print_surgical_guide" value="1"
+                                  id="check13"><span class="mx-2 ml-n2"></span>Print surgical guide</label>
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check14">
+                                <input class="form__input" type="checkbox" name="print_STL" value="1"
+                                  id="check13"><span class="mx-2 ml-n2"></span>Print STL file of surface</label>
+                            </div>
+                            <div class="row mb-3">
+                              <div class="d-flex flex-column col-12 col-md-6">
+                                <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check15">
+                                  <input class="form__input" type="checkbox" name="insert_fix_sleeves" value="1"
+                                    id="check15"><span class="mx-2 ml-n2"></span>Insert/fix sleeves</label>
+                                <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check16">
+                                  <input class="form__input" type="checkbox" name="print_model" value="1"
+                                    id="check16"><span class="mx-2 ml-n2"></span>Print model</label>
+                              </div>
+                              <div class="d-flex flex-column col-12 col-md-6">
+                                <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check17">
+                                  <input class="form__input" type="checkbox" name="insert_analogues" value="1"
+                                    id="check17"><span class="mx-2 ml-n2"></span>Insert analogues</label>
+                                <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check18">
+                                  <input class="form__input" type="checkbox" name="create_surgical_protocol" value="1"
+                                    id="check18"><span class="mx-2 ml-n2"></span>Create the surgical protocol:</label>
+                              </div>
+                            </div>
+                            <div class="row flex-wrap justify-content-center">
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check19">
+                                  <input class="form__input" type="checkbox" name="send_email" value="1"
+                                    id="check19"><span class="mx-2 ml-n2"></span>Send by e-mail</label>
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check20">
+                                <input class="form__input" type="checkbox" name="send_print" value="1"
+                                  id="check20"><span class="mx-2 ml-n2"></span>Send hard copy (print)</label>
+                            </div>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accordion__tab">
+                        <div class="accordion__group d-flex align-items-center py-1">
+                          <p class="accordion__title w-100 px-3 mb-0">Rent:</p>
+                        </div>
+                        <div class="accordion__content border border-primary border-top-0 p-3">
+                          <p class="accordion__text py-1 mb-0">
+                            <div class="row flex-wrap justify-content-center">
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check21">
+                                  <input class="form__input" type="checkbox" name="rent_drills" value="1"
+                                    id="check21"><span class="mx-2 ml-n2"></span>Rent me drills</label>
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check22">
+                                <input class="form__input" type="checkbox" name="rent_sleeves" value="1"
+                                  id="check22"><span class="mx-2 ml-n2"></span>Rent me sleeves</label>
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check23">
+                                <input class="form__input" type="checkbox" name="rent_analogues" value="1"
+                                  id="check23"><span class="mx-2 ml-n2"></span>Rent me analogues</label>
+                            </div>
+                          </p>
+                        </div>
+                      </div>
+                    <div class="accordion__tab">
+                      <div class="accordion__group d-flex align-items-center py-1">
+                        <p class="accordion__title w-100 px-3 mb-0">Shipping:</p>
+                      </div>
+                      <div class="accordion__content border border-primary border-top-0 p-3">
+                        <p class="accordion__text py-1 mb-0">
+                          <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check24">
+                            <input class="form__input" type="checkbox" name="ship_order" value="1"
+                              id="check24"><span class="mx-2 ml-n2"></span>Ship my order</label>
+                          <div class="row mb-3">
+                            <div class="d-flex flex-column col-12 col-md-6">
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check25">
+                                <input class="form__input" type="checkbox" name="sent_notify" value="1"
+                                  id="check25"><span class="mx-2 ml-n2"></span>Notify me when the digital project is sent:</label>
+                            </div>
+                            <div class="d-flex flex-column col-12 col-md-6">
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check26">
+                                <input class="form__input" type="checkbox" name="shipped_order_notify" value="1"
+                                  id="check26"><span class="mx-2 ml-n2"></span>Notify me when the order is shipped:</label>
+                            </div>
+                          </div>
+                          <div class="row flex-wrap justify-content-center">
+                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check27">
+                                <input id="by_phone" class="form__input" type="checkbox" name="notify_phone" value="1"
+                                  id="check27"><span class="mx-2 ml-n2"></span>by Phone</label>
+                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check28">
+                              <input id="by_sms" class="form__input" type="checkbox" name="notify_sms" value="1"
+                                id="check28"><span class="mx-2 ml-n2"></span>by SMS (message)</label>
+                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check29">
+                              <input id="by_email" class="form__input" type="checkbox" name="notify_email" value="1"
+                                id="check29"><span class="mx-2 ml-n2"></span>by e-mail</label>
+                          </div>
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-12 text-center my-3">
-                    <button class="form-submit btn btn-primary btn-arrow border-0 my-3">SUBMIT</button>
-                  </div>
+                </div>
+                <div class="col-12 text-center my-3">
+                  <button class="form-submit btn btn-primary btn-arrow border-0 my-3">SUBMIT</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   </main>
   <footer class="page-footer pt-3" data-aos="fade-in">
     <div class="social d-flex justify-content-center bg-secondary py-2">
       <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
-        <svg class="icon m-auto"><use xlink:href="#facebook"></use></svg>
+        <svg class="icon m-auto">
+          <use xlink:href="#facebook"></use>
+        </svg>
       </a>
       <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
-        <svg class="icon m-auto"><use xlink:href="#instagram"></use></svg>
+        <svg class="icon m-auto">
+          <use xlink:href="#instagram"></use>
+        </svg>
       </a>
       <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
-        <svg class="icon m-auto"><use xlink:href="#youtube"></use></svg>
+        <svg class="icon m-auto">
+          <use xlink:href="#youtube"></use>
+        </svg>
       </a>
       <a class="social__link bg-white rounded-lg mx-2" href="#" target="_blank">
-        <svg class="icon m-auto"><use xlink:href="#linkedin"></use></svg>
+        <svg class="icon m-auto">
+          <use xlink:href="#linkedin"></use>
+        </svg>
       </a>
     </div>
     <div class="container-fluid">
@@ -339,13 +589,17 @@
                 <li class="mb-2"><a class="h5" href="#">Contact Us</a></li>
               </ul>
             </div>
-            <div class="d-flex flex-column border-md-x border-primary col-12 col-md-4 col-xl-6 text-center order-0 order-md-1">
-              <svg class="brand-text w-100 mx-auto"><use xlink:href="#logo-text"></use></svg>
+            <div
+              class="d-flex flex-column border-md-x border-primary col-12 col-md-4 col-xl-6 text-center order-0 order-md-1">
+              <svg class="brand-text w-100 mx-auto">
+                <use xlink:href="#logo-text"></use>
+              </svg>
               <p class="text-dark-light my-2">Dental Implant Planning Software</p>
               <div class="text-condensed mt-auto">
                 <h6 class="font-weight-normal">Ekaterinenskaya sq 8<br>Odessa, Ukraine</h6>
                 <a class="h5 d-block font-weight-normal py-1" href="tel:+38 067 787 11 00">+38 067 787 11 00</a>
-                <a class="h6 d-block font-weight-normal text-dark" href="mailto:prodigident@gmail.com">prodigident@gmail.com</a>
+                <a class="h6 d-block font-weight-normal text-dark"
+                  href="mailto:prodigident@gmail.com">prodigident@gmail.com</a>
               </div>
             </div>
             <button class="footer-toggler btn btn-primary btn-block d-block d-md-none my-3">Toogle menu</button>
@@ -370,13 +624,17 @@
         <a class="h6 font-weight-normal text-white text-truncate mx-1 mb-0" href="#">Terms Of Use</a> |
         <a class="h6 font-weight-normal text-white text-truncate mx-1 mb-0" href="#">Quality Policy</a>
       </div>
-      <p class="h6 font-weight-normal text-dark-light py-1 mx-1 mb-0">&copy; 2016 - <span id="year"></span> ImplaStation | ProDigiDent. All Rights Reserved</p>
+      <p class="h6 font-weight-normal text-dark-light py-1 mx-1 mb-0">&copy; 2016 - <span id="year"></span> ImplaStation
+        | ProDigiDent. All Rights Reserved</p>
       <script>document.getElementById('year').innerText = new Date().getFullYear()</script>
     </div>
   </footer>
   <button class="btn btn-to-top p-0" type="button">
-    <svg class="arrow"><use xlink:href="#up-arrow"></use></svg>
+    <svg class="arrow">
+      <use xlink:href="#up-arrow"></use>
+    </svg>
   </button>
   <script type="text/javascript" src="/assets/dist/javascript/app.js"></script>
 </body>
+
 </html>

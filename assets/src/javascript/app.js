@@ -199,16 +199,16 @@
     $(".wrapper").css("margin-top", $header.outerHeight());
   }
   // Radio
-  $('input[type="radio"]').click((ev) => {
-    let previousValue = $(ev.currentTarget).data('check');
-
-    if (previousValue) {
-      $(ev.currentTarget).prop('checked', false);
-      $(ev.currentTarget).data('check', false);
-    } else {
-      $(ev.currentTarget).prop('checked', true);
-      $(ev.currentTarget).data('check', true);
-    }
+  let booRadio, $allRadios = $('input[type="radio"]');
+  $allRadios.each((i, el) => {
+    el.addEventListener('click', () => {
+      if (booRadio == el) {
+        el.checked = false;
+        booRadio = null;
+      } else {
+        booRadio = el;
+      }
+    });
   });
   // Menu
   $(".burger").click(() => {
