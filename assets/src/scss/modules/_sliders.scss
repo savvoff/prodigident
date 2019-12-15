@@ -74,6 +74,8 @@
       figure {
         min-height: 50px;
         height: auto;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }
@@ -83,6 +85,8 @@
       figure {
         height: 100%;
         background-color: darken($white, 10%);
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
     figure {

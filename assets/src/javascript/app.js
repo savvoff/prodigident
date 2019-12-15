@@ -60,6 +60,7 @@
         autoPlay: 5000,
         pageDots: false,
         pauseAutoPlayOnHover: false,
+        wrapAround: true,
         imagesLoaded: true,
         percentPosition: false,
         prevNextButtons: true,
@@ -74,7 +75,7 @@
         }
       },
       sliderGuideText: {
-        // wrapAround: true,
+        wrapAround: true,
         fade: true,
         asNavFor: ".slider-guide",
         draggable: false,
@@ -103,7 +104,7 @@
         }
       },
       sliderPartners: {
-        // wrapAround: true,
+        wrapAround: true,
         pageDots: false,
         groupCells: true,
         percentPosition: false,
@@ -130,7 +131,7 @@
   // Zoom auto set
   function setZoomClass() {
     if (window.devicePixelRatio === 1.25 || window.devicePixelRatio === 1.5) {
-      document.documentElement.classList.add("zoom125");
+      // document.documentElement.classList.add("zoom125");
       settings.aos.disable = true;
     }
   }
@@ -230,15 +231,16 @@
   }
   function moveBorderSlideToActive() {
     if (isMobile()) return;
-    let $activeEl = $(".page-header__menu li");
-    if ($(".page-header__menu .active").length)
+    if ($(".page-header__menu .active").length) {
       $activeEl = $(".page-header__menu .active");
-    $(".slide-border")
+      if (!$activeEl.hasClass('py-lg-3')) $activeEl = $activeEl.closest('li.py-lg-3')
+      $(".slide-border")
       .stop()
       .css({
         left: $activeEl.first().position().left,
         width: $activeEl.width()
       });
+    } else $(".slide-border").remove()
   }
   $(".page-header__menu li").on("mouseover", moveBorderSlide);
   $(".page-header__menu li").on("mouseout", moveBorderSlideToActive);
@@ -263,6 +265,19 @@
   $toTopBtn.click(() => {
     $html.animate({ scrollTop: 0 }, 500);
     return false;
+  });
+
+  // Smooth scroll
+  $('a[href*="#"]:not([href="#"])').click(() => {
+    let target = $(event.currentTarget.hash),
+        aosGap = 100; // 100 - aos translate in px
+    if (isMobile()) aosGap = 0;
+    if (target.length) {
+      $html.animate({
+        scrollTop: target.offset().top - $header.innerHeight() * 1.5 - aosGap
+      }, 1000);
+      return false;
+    }
   });
 
   // Sliders

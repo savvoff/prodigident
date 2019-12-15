@@ -113,6 +113,11 @@
           &:last-child {
             border-bottom: $border-width solid $primary;
           }
+          &.active a {
+            @include hover-focus() {
+              color: $white;
+            }
+          }
         }
         a {
           width: 110%;

@@ -124,6 +124,21 @@
                   <div class="d-flex align-items-center w-100">
                     <input class="form__input w-100 mb-3" id="email" name="email" type="email" placeholder="Email"
                       required>
+                      <script>
+                        var email = document.getElementById('email');
+                        var regex = /\S+@\S+\.\S+/;
+                        var spanMes = document.createElement('span');
+                        email.addEventListener('input', function(e) {
+                          if (!regex.test(String(this.value).toLowerCase())) {
+                            spanMes.innerText = 'Invalid email address';
+                            email.after(spanMes);
+                            email.classList.add('is-error');
+                          } else {
+                            spanMes.innerText = '';
+                            email.classList.remove('is-error');
+                          }
+                        });
+                      </script>
                   </div>
                 </div>
                 <div class="col-12">
@@ -177,6 +192,20 @@
                         <td><input class="form__input bg" type="radio" name="radio9" value="D"><span>D</span></td>
                       </tr>
                     </tbody>
+                    <script>
+                      var customCondEls = document.querySelectorAll('input[name="radio9"]');
+                      customCondEls.forEach(function(el) {
+                        el.addEventListener('click', function() {
+                          setTimeout(function() {
+                            if (customCondEls[0].checked || customCondEls[1].checked) {
+                              document.querySelector('input[name="DCL3"]').disabled = false;
+                            } else {
+                              document.querySelector('input[name="DCL3"]').disabled = true;
+                            }
+                          }, 500);
+                        })
+                      });
+                    </script>
                     <tfoot>
                       <tr>
                         <td colspan="10">Mark object: (R) - real object, (D) - digital object</td>
@@ -195,10 +224,10 @@
                       <input class="form__input" id="proj" name="DCL1" type="checkbox" value="1"><span
                         class="mx-2 ml-n2"></span></label> <br>
                   </div>
-                  <div class="accordion ml-4 my-3">
+                  <div class="accordion my-3">
                     <div class="accordion__tab">
                       <div class="accordion__group d-flex align-items-center py-1">
-                        <p class="accordion__title w-100 px-3 mb-0">Virtual Teeth Position</p>
+                        <p class="accordion__title w-100 px-4 mb-0">Virtual Teeth Position</p>
                       </div>
                       <div class="accordion__content border border-primary border-top-0 p-3">
                         <table class="table table-bordered text-center">
@@ -290,7 +319,7 @@
                     </div>
                     <div class="accordion__tab">
                       <div class="accordion__group d-flex align-items-center py-1">
-                        <p class="accordion__title w-100 px-3 mb-0">Implant Position</p>
+                        <p class="accordion__title w-100 px-4 mb-0">Implant Position</p>
                       </div>
                       <div class="accordion__content border border-primary border-top-0 p-3">
                         <table class="table table-bordered text-center">
@@ -364,7 +393,7 @@
                     </div>
                     <div class="accordion__tab">
                       <div class="accordion__group d-flex align-items-center py-1">
-                        <p class="accordion__title w-100 px-3 mb-0">Virtual abutment placement:</p>
+                        <p class="accordion__title w-100 px-4 mb-0">Virtual abutment placement:</p>
                       </div>
                       <div class="accordion__content border border-primary border-top-0 p-3">
                         <p class="accordion__text py-1 mb-0">
@@ -388,10 +417,10 @@
                     </div>
                     <div class="accordion__tab">
                       <div class="accordion__group d-flex align-items-center py-1">
-                        <p class="accordion__title w-100 px-3 mb-0">Apply fixation pins:</p>
+                        <p class="accordion__title w-100 px-4 mb-0">Apply fixation pins:</p>
                       </div>
                       <div class="accordion__content border border-primary border-top-0 p-3">
-                        <p class="accordion__text py-1 mb-0">
+                        <p class="accordion__text text-dark py-1 mb-0">
                           <div class="d-flex align-items-center w-100">
                             <label>Pin system: <input class="form__input w-100 mb-3" name="pin_system"
                                 type="text" placeholder="Type here the pin system you prefer"></label>
@@ -405,15 +434,15 @@
                     </div>
                     <div class="accordion__tab">
                       <div class="accordion__group d-flex align-items-center py-1">
-                        <p class="accordion__title w-100 px-3 mb-0">Digital sleeves and drill placement:</p>
+                        <p class="accordion__title w-100 px-4 mb-0">Digital sleeves and drill placement:</p>
                       </div>
                       <div class="accordion__content border border-primary border-top-0 p-3">
-                        <p class="accordion__text py-1 mb-0">
+                        <p class="accordion__text text-dark py-1 mb-0">
                           <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check10">
                             <input class="form__input" type="checkbox" name="sleeve_positioning" value="1"
                               id="check10"><span class="mx-2 ml-n2"></span>Sleeve positioning</label>
                           <div class="d-flex align-items-center w-100">
-                            <label>Sleeve system: <input class="form__input w-100 mb-3" name="sleeve_system"
+                            <label class="w-100">Sleeve system: <input class="form__input w-100 mb-3" name="sleeve_system"
                                 type="text" placeholder="Type here the sleeve system you prefer"></label>
                           </div>
                           <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check11">
@@ -424,7 +453,7 @@
                                 id="check12"><span class="mx-2 ml-n2"></span>Plan the sleeve position under the gum</label>
                           <div class="d-flex align-items-center w-100">
                             <label>Drill system: <input class="form__input w-100 mb-3" name="drill_system"
-                                type="text" placeholder="Type here the drill system you prefer"></label>
+                                type="text" placeholder="Type here the drill system you prefer" title="Type here the drill system you prefer"></label>
                           </div>
                           <div class="d-flex align-items-center w-100">
                               <textarea class="form__input w-100 mb-3" name="drill_comment" rows="6" placeholder="Comments:"></textarea>
@@ -435,17 +464,33 @@
 
                     <div class="accordion__tab">
                       <div class="accordion__group d-flex align-items-center py-1">
-                        <p class="accordion__title w-100 px-3 mb-0">Surgical guides creation:</p>
+                        <p class="accordion__title w-100 px-4 mb-0">Surgical guides creation:</p>
                       </div>
                       <div class="accordion__content border border-primary border-top-0 p-3">
-                        <p class="accordion__text py-1 mb-0">
+                        <p class="accordion__text text-dark py-1 mb-0">
                           <div class="d-flex align-items-center w-100">
                             <label>Send me a digital project for approval before the date: <input id="date" class="form__input w-100 mb-3" name="sleeve_system"
-                              type="date" name="date" placeholder="Type here the sleeve system you prefer"></label>
+                              type="date" name="date"></label>
                             <script>
+                                var picker = document.getElementById('date');
                                 var date = new Date();
-                                var month = date.getMonth()+1;
-                                document.getElementById('date').min = date.getFullYear()+'-'+month+'-'+date.getDate();
+                                var spanMes = document.createElement('span');
+                                picker.addEventListener('input', function(e) {
+                                  var day = new Date(this.value).getUTCDay();
+                                  if([0].includes(day)) {
+                                    e.preventDefault();
+                                    this.value = '';
+                                    picker.classList.add('is-error');
+                                    spanMes.innerText = 'Sundays not allowed';
+                                    picker.after(spanMes);
+                                  } else {
+                                    picker.classList.remove('is-error');
+                                    spanMes.innerText = '';
+                                  }
+                                });
+                                var month = date.getUTCMonth() + 1;
+                                var day = date.getUTCDate() + 1;
+                                picker.min = date.getUTCFullYear()+'-'+month+'-'+day;
                             </script>
                           </div>
                             <div class="d-flex flex-column">
@@ -487,10 +532,10 @@
                     </div>
                     <div class="accordion__tab">
                         <div class="accordion__group d-flex align-items-center py-1">
-                          <p class="accordion__title w-100 px-3 mb-0">Rent:</p>
+                          <p class="accordion__title w-100 px-4 mb-0">Rent:</p>
                         </div>
                         <div class="accordion__content border border-primary border-top-0 p-3">
-                          <p class="accordion__text py-1 mb-0">
+                          <p class="accordion__text text-dark py-1 mb-0">
                             <div class="row flex-wrap justify-content-center">
                               <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check21">
                                   <input class="form__input" type="checkbox" name="rent_drills" value="1"
@@ -507,36 +552,53 @@
                       </div>
                     <div class="accordion__tab">
                       <div class="accordion__group d-flex align-items-center py-1">
-                        <p class="accordion__title w-100 px-3 mb-0">Shipping:</p>
+                        <p class="accordion__title w-100 px-4 mb-0">Shipping:</p>
                       </div>
                       <div class="accordion__content border border-primary border-top-0 p-3">
-                        <p class="accordion__text py-1 mb-0">
-                          <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check24">
-                            <input class="form__input" type="checkbox" name="ship_order" value="1"
-                              id="check24"><span class="mx-2 ml-n2"></span>Ship my order</label>
+                        <p class="accordion__text text-dark py-1 mb-0">
+                          <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3">
+                            <input class="form__input" type="checkbox" name="ship_order" value="1">
+                              <span class="mx-2 ml-n2"></span>Ship my order</label>
                           <div class="row mb-3">
                             <div class="d-flex flex-column col-12 col-md-6">
-                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check25">
-                                <input class="form__input" type="checkbox" name="sent_notify" value="1"
-                                  id="check25"><span class="mx-2 ml-n2"></span>Notify me when the digital project is sent:</label>
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3">
+                                <input class="form__input" type="checkbox" name="sent_notify" value="1">
+                                  <span class="mx-2 ml-n2"></span>Notify me when the digital project is sent:</label>
                             </div>
                             <div class="d-flex flex-column col-12 col-md-6">
-                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check26">
-                                <input class="form__input" type="checkbox" name="shipped_order_notify" value="1"
-                                  id="check26"><span class="mx-2 ml-n2"></span>Notify me when the order is shipped:</label>
+                              <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3">
+                                <input class="form__input" type="checkbox" name="shipped_order_notify" value="1">
+                                  <span class="mx-2 ml-n2"></span>Notify me when the order is shipped:</label>
                             </div>
                           </div>
-                          <div class="row flex-wrap justify-content-center">
-                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check27">
-                                <input id="by_phone" class="form__input" type="checkbox" name="notify_phone" value="1"
-                                  id="check27"><span class="mx-2 ml-n2"></span>by Phone</label>
-                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check28">
-                              <input id="by_sms" class="form__input" type="checkbox" name="notify_sms" value="1"
-                                id="check28"><span class="mx-2 ml-n2"></span>by SMS (message)</label>
-                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check29">
-                              <input id="by_email" class="form__input" type="checkbox" name="notify_email" value="1"
-                                id="check29"><span class="mx-2 ml-n2"></span>by e-mail</label>
+                          <div class="notify row flex-wrap justify-content-center">
+                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3">
+                              <input id="by_phone" class="form__input" type="checkbox" name="notify_phone" value="1" disabled>
+                                <span class="mx-2 ml-n2"></span>by Phone</label>
+                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3">
+                              <input id="by_sms" class="form__input" type="checkbox" name="notify_sms" value="1" disabled>
+                                <span class="mx-2 ml-n2"></span>by SMS (message)</label>
+                            <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3">
+                              <input id="by_email" class="form__input" type="checkbox" name="notify_email" value="1" disabled>
+                                <span class="mx-2 ml-n2"></span>by e-mail</label>
                           </div>
+                          <script>
+                            var notify = document.querySelectorAll('input[name="sent_notify"], input[name="shipped_order_notify"]');
+                            var notifyTraget = document.querySelectorAll('.notify input');
+                            notify.forEach(function(el) {
+                              el.addEventListener('click', function() {
+                                if (notify[0].checked || notify[1].checked) {
+                                  notifyTraget.forEach(function(el) {
+                                    el.disabled = false;
+                                  });
+                                } else {
+                                  notifyTraget.forEach(function(el) {
+                                    el.disabled = true;
+                                  });
+                                }
+                              });
+                            });
+                          </script>
                         </p>
                       </div>
                     </div>
