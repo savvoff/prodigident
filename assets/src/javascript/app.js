@@ -8,7 +8,7 @@
 
 (() => {
   // Utils
-  const PATH = "";
+  const PATH = themePath;
   const $html = $("html");
   const $body = $("body");
   const $loader = $(".loader");
@@ -268,16 +268,14 @@
   });
 
   // Smooth scroll
-  $('a[href*="#"]:not([href="#"])').click(() => {
-    let target = $(event.currentTarget.hash),
+  $('[data-hash]').click(() => {
+    let target = $(event.currentTarget).data('hash'),
         aosGap = 100; // 100 - aos translate in px
     if (isMobile()) aosGap = 0;
-    if (target.length) {
-      $html.animate({
-        scrollTop: target.offset().top - $header.innerHeight() * 1.5 - aosGap
-      }, 1000);
-      return false;
-    }
+    $html.animate({
+      scrollTop: $(target).offset().top - $header.innerHeight() * 1.5 - aosGap
+    }, 1000);
+    return false;
   });
 
   // Sliders

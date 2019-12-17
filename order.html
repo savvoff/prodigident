@@ -17,6 +17,10 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e30613">
   <link rel="stylesheet" href="/assets/dist/css/app.css">
   <script type="text/javascript" src="https://implastation.com/cdn/js/polyfiller.js"></script>
+<script>
+    // change null to <?php echo get_template_directory_uri(); ?>
+    var themePath = null || '';
+  </script>
 </head>
 
 <body style="overflow: hidden;">
@@ -108,7 +112,7 @@
           <div class="col-12 col-lg-10 col-xl-8" data-aos="fade-up">
             <p class="page-section__title font-weight-normal mt-5 mb-4">To send us your feedback, please fill the form
               below!</p>
-            <div class="card border border-primary bg-white h-auto p-5">
+            <div class="card border border-primary bg-white h-auto p-3 p-md-5">
               <div class="form row">
                 <div class="col-12">
                   <div class="d-flex align-items-center w-100">
@@ -154,64 +158,67 @@
                     <textarea class="form__input w-100 mb-3" name="doc_comment" rows="6"
                       placeholder="Comments"></textarea>
                   </div>
-                  <table class="table table-bordered text-center">
-                    <h4 class="text-white bg-primary p-3">Delivery check-list:</h4>
-                    <thead>
-                      <tr>
-                        <th scope="col"></th>
-                        <th scope="col" colspan="2">Impression</th>
-                        <th scope="col" colspan="2">Model</th>
-                        <th scope="col" colspan="2">Wax-Up</th>
-                        <th scope="col" colspan="2">Denture</th>
-                        <th scope="col">Bite</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">Upper</th>
-                        <td><input class="form__input bg" type="radio" name="radio1" value="R"><span>R</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio1" value="D"><span>D</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio2" value="R"><span>R</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio2" value="D"><span>D</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio3" value="R"><span>R</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio3" value="D"><span>D</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio4" value="R"><span>R</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio4" value="D"><span>D</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio9" value="R"><span>R</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Lower</th>
-                        <td><input class="form__input bg" type="radio" name="radio5" value="R"><span>R</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio5" value="D"><span>D</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio6" value="R"><span>R</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio6" value="D"><span>D</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio7" value="R"><span>R</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio7" value="D"><span>D</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio8" value="R"><span>R</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio8" value="D"><span>D</span></td>
-                        <td><input class="form__input bg" type="radio" name="radio9" value="D"><span>D</span></td>
-                      </tr>
-                    </tbody>
-                    <script>
-                      var customCondEls = document.querySelectorAll('input[name="radio9"]');
-                      customCondEls.forEach(function(el) {
-                        el.addEventListener('click', function() {
-                          setTimeout(function() {
-                            if (customCondEls[0].checked || customCondEls[1].checked) {
-                              document.querySelector('input[name="DCL3"]').disabled = false;
-                            } else {
-                              document.querySelector('input[name="DCL3"]').disabled = true;
-                            }
-                          }, 500);
-                        })
-                      });
-                    </script>
-                    <tfoot>
-                      <tr>
-                        <td colspan="10">Mark object: (R) - real object, (D) - digital object</td>
-                      </tr>
-                    </tfoot>
-                  </table>
+                  <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                      <h4 class="text-white bg-primary p-3">Delivery check-list:</h4>
+                      <thead>
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col" colspan="2">Impression</th>
+                          <th scope="col" colspan="2">Model</th>
+                          <th scope="col" colspan="2">Wax-Up</th>
+                          <th scope="col" colspan="2">Denture</th>
+                          <th scope="col">Bite</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Upper</th>
+                          <td><input class="form__input bg" type="radio" name="radio1" value="R"><span>R</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio1" value="D"><span>D</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio2" value="R"><span>R</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio2" value="D"><span>D</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio3" value="R"><span>R</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio3" value="D"><span>D</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio4" value="R"><span>R</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio4" value="D"><span>D</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio9" value="R"><span>R</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Lower</th>
+                          <td><input class="form__input bg" type="radio" name="radio5" value="R"><span>R</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio5" value="D"><span>D</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio6" value="R"><span>R</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio6" value="D"><span>D</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio7" value="R"><span>R</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio7" value="D"><span>D</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio8" value="R"><span>R</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio8" value="D"><span>D</span></td>
+                          <td><input class="form__input bg" type="radio" name="radio9" value="D"><span>D</span></td>
+                        </tr>
+                      </tbody>
+                      <script>
+                        var customCondEls = document.querySelectorAll('input[name="radio9"]');
+                        customCondEls.forEach(function(el) {
+                          el.addEventListener('click', function() {
+                            setTimeout(function() {
+                              if (customCondEls[0].checked || customCondEls[1].checked) {
+                                document.querySelector('input[name="DCL3"]').disabled = false;
+                              } else {
+                                document.querySelector('input[name="DCL3"]').disabled = true;
+                                document.querySelector('input[name="DCL3"]').checked = false;
+                              }
+                            }, 100);
+                          })
+                        });
+                      </script>
+                      <tfoot>
+                        <tr>
+                          <td colspan="10">Mark object: (R) - real object, (D) - digital object</td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
                   <div class="d-flex align-items-center w-100">
                     <textarea class="form__input w-100 mb-3" rows="6" name="delivery_comments" placeholder="Comments
 
@@ -229,7 +236,7 @@
                       <div class="accordion__group d-flex align-items-center py-1">
                         <p class="accordion__title w-100 px-4 mb-0">Virtual Teeth Position</p>
                       </div>
-                      <div class="accordion__content border border-primary border-top-0 p-3">
+                      <div class="accordion__content table-responsive border border-primary border-top-0 p-3">
                         <table class="table table-bordered text-center">
                           <thead>
                             <tr>
@@ -321,7 +328,7 @@
                       <div class="accordion__group d-flex align-items-center py-1">
                         <p class="accordion__title w-100 px-4 mb-0">Implant Position</p>
                       </div>
-                      <div class="accordion__content border border-primary border-top-0 p-3">
+                      <div class="accordion__content table-responsive border border-primary border-top-0 p-3">
                         <table class="table table-bordered text-center">
                           <tbody>
                             <td><input class="form__input bg" type="radio" name="ip_18" value="1"><span>18</span></td>
@@ -362,7 +369,7 @@
                           </tbody>
                         </table>
                         <div class="d-flex align-items-center w-100">
-                          <label>Implant system: <input class="form__input w-100 mb-3" name="implant_system" type="text"
+                          <label class="w-100">Implant system: <input class="form__input w-100 mb-3" name="implant_system" type="text"
                               placeholder="Type here the implant system you prefer"></label>
                         </div>
                         <div class="row">
@@ -422,11 +429,11 @@
                       <div class="accordion__content border border-primary border-top-0 p-3">
                         <p class="accordion__text text-dark py-1 mb-0">
                           <div class="d-flex align-items-center w-100">
-                            <label>Pin system: <input class="form__input w-100 mb-3" name="pin_system"
+                            <label class="w-100">Pin system: <input class="form__input w-100 mb-3" name="pin_system"
                                 type="text" placeholder="Type here the pin system you prefer"></label>
                           </div>
                           <div class="d-flex align-items-center w-100">
-                            <label>Pin quantity: <input class="form__input w-100 mb-3" name="pin_quantity"
+                            <label class="w-100">Pin quantity: <input class="form__input w-100 mb-3" name="pin_quantity"
                                 type="text" placeholder="Type here pin quantity"></label>
                           </div>
                         </p>
@@ -452,8 +459,8 @@
                               <input class="form__input" type="checkbox" name="sleeve_under_the_gum" value="1"
                                 id="check12"><span class="mx-2 ml-n2"></span>Plan the sleeve position under the gum</label>
                           <div class="d-flex align-items-center w-100">
-                            <label>Drill system: <input class="form__input w-100 mb-3" name="drill_system"
-                                type="text" placeholder="Type here the drill system you prefer" title="Type here the drill system you prefer"></label>
+                            <label class="w-100">Drill system: <input class="form__input w-100 mb-3" name="drill_system"
+                                type="text" placeholder="Type here the drill system you prefer"></label>
                           </div>
                           <div class="d-flex align-items-center w-100">
                               <textarea class="form__input w-100 mb-3" name="drill_comment" rows="6" placeholder="Comments:"></textarea>
@@ -499,7 +506,7 @@
                                   id="check13"><span class="mx-2 ml-n2"></span>Print surgical guide</label>
                               <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check14">
                                 <input class="form__input" type="checkbox" name="print_STL" value="1"
-                                  id="check13"><span class="mx-2 ml-n2"></span>Print STL file of surface</label>
+                                  id="check14"><span class="mx-2 ml-n2"></span>Print STL file of surface</label>
                             </div>
                             <div class="row mb-3">
                               <div class="d-flex flex-column col-12 col-md-6">
@@ -594,6 +601,7 @@
                                 } else {
                                   notifyTraget.forEach(function(el) {
                                     el.disabled = true;
+                                    el.checked = false;
                                   });
                                 }
                               });

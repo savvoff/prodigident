@@ -14,6 +14,10 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e30613">
   <link rel="stylesheet" href="/assets/dist/css/app.css">
+<script>
+    // change null to <?php echo get_template_directory_uri(); ?>
+    var themePath = null || '';
+  </script>
 </head>
 <body style="overflow: hidden;">
   <div id="svg-sprites" style="width: 0; height: 0; visibility: hidden;"></div>
@@ -114,7 +118,7 @@
             <img class="mt-lg-n4 mt-xl-n5" src="/assets/dist/images/pattern.png" alt="pattern">
           </div>
           <div class="col-12 col-lg-10 text-center">
-            <a href="#master-class" class="btn btn-primary">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+            <button class="btn btn-primary" data-hash="#master-class">ЗАРЕГИСТРИРОВАТЬСЯ</button>
           </div>
         </div>
       </div>
