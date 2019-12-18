@@ -124,7 +124,7 @@
 
   // load sprite on page
   $("#svg-sprites").load(
-    PATH + "assets/dist/images/svg/sprite.symbol.svg",
+    PATH + "/assets/dist/images/svg/sprite.symbol.svg",
     r => r.data
   );
 
@@ -192,7 +192,7 @@
   // Particles init
   const $particles = $(".particles");
   $particles.each((i, el) => {
-    particlesJS.load(el.id, `${window.location.origin}/particles.json`);
+    particlesJS.load(el.id, `${PATH}/particles.json`);
   });
 
   // Wrapper top
