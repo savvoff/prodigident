@@ -13,7 +13,7 @@ p, li {
     font-size: $h6-font-size;
   }
 }
-input, textarea, select {
+input:not([type="radio"]), textarea, select {
   cursor: text;
   @include hover-focus() {
     cursor: text;

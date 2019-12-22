@@ -232,9 +232,9 @@
   $("input[type='radio']").each((i, el) => {
     $(el).on("mousedown", () => {
       if (el.checked) {
-        $(el).click(() => {
+        el.onclick = () => {
           el.checked = false;
-        });
+        }
       } else {
         el.onclick = null;
       }
