@@ -476,29 +476,7 @@
                       <div class="accordion__content border border-primary border-top-0 p-3">
                         <p class="accordion__text text-dark py-1 mb-0">
                           <div class="d-flex align-items-center w-100">
-                            <label>Send me a digital project for approval before the date: <input id="date" class="form__input w-100 mb-3" name="sleeve_system"
-                              type="date" name="date"></label>
-                            <script>
-                                var picker = document.getElementById('date');
-                                var date = new Date();
-                                var spanMes = document.createElement('span');
-                                picker.addEventListener('input', function(e) {
-                                  var day = new Date(this.value).getUTCDay();
-                                  if([0].includes(day)) {
-                                    e.preventDefault();
-                                    this.value = '';
-                                    picker.classList.add('is-error');
-                                    spanMes.innerText = 'Sundays not allowed';
-                                    picker.after(spanMes);
-                                  } else {
-                                    picker.classList.remove('is-error');
-                                    spanMes.innerText = '';
-                                  }
-                                });
-                                var month = date.getUTCMonth() + 1;
-                                var day = date.getUTCDate() + 1;
-                                picker.min = date.getUTCFullYear()+'-'+month+'-'+day;
-                            </script>
+                            <label>Send me a digital project for approval before the date: <input name="date" class="form__input form-date"/></label>
                           </div>
                             <div class="d-flex flex-column">
                               <label class="h5 d-inline-flex align-items-center font-weight-normal mr-3" for="check13">

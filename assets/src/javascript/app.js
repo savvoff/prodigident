@@ -48,6 +48,18 @@
       fixedBackground: true,
       excluded: ""
     },
+    mediumZoom: {
+      background: "rgba(33, 33, 33, 0.5)",
+      scrollOffset: 0
+    },
+    datePicker: {
+      autoClose: true,
+      minDate: (() => {
+        let currentDate = new Date();
+        currentDate.setDate(currentDate.getDate() + 1);
+        return currentDate;
+      })()
+    },
     flickity: {
       sliderFunctions: {
         pageDots: true,
@@ -85,7 +97,7 @@
         contain: true
       },
       sliderPrezi: {
-        // wrapAround: true,
+        wrapAround: true,
         fullscreen: true,
         lazyLoad: 1,
         asNavFor: ".slider-prezi",
@@ -93,6 +105,21 @@
         percentPosition: false,
         prevNextButtons: true,
         adaptiveHeight: true,
+        contain: true,
+        arrowShape: {
+          x0: 10,
+          x1: 60,
+          y1: 50,
+          x2: 65,
+          y2: 45,
+          x3: 20
+        }
+      },
+      sliderEvents: {
+        wrapAround: true,
+        pageDots: false,
+        percentPosition: false,
+        prevNextButtons: true,
         contain: true,
         arrowShape: {
           x0: 10,
@@ -135,6 +162,8 @@
       settings.aos.disable = true;
     }
   }
+  // Zoom img irticle
+  mediumZoom("article img", settings.mediumZoom);
 
   // Obj fit
   objectFitImages($(".img-fit"));
@@ -200,14 +229,14 @@
     $(".wrapper").css("margin-top", $header.outerHeight());
   }
   // Radio
-  let booRadio, $allRadios = $('input[type="radio"]');
-  $allRadios.each((i, el) => {
-    el.addEventListener('click', () => {
-      if (booRadio == el) {
-        el.checked = false;
-        booRadio = null;
+  $("input[type='radio']").each((i, el) => {
+    $(el).on("mousedown", () => {
+      if (el.checked) {
+        $(el).click(() => {
+          el.checked = false;
+        });
       } else {
-        booRadio = el;
+        el.onclick = null;
       }
     });
   });
@@ -233,14 +262,15 @@
     if (isMobile()) return;
     if ($(".page-header__menu .active").length) {
       $activeEl = $(".page-header__menu .active");
-      if (!$activeEl.hasClass('py-lg-3')) $activeEl = $activeEl.closest('li.py-lg-3')
+      if (!$activeEl.hasClass("py-lg-3"))
+        $activeEl = $activeEl.closest("li.py-lg-3");
       $(".slide-border")
-      .stop()
-      .css({
-        left: $activeEl.first().position().left,
-        width: $activeEl.width()
-      });
-    } else $(".slide-border").remove()
+        .stop()
+        .css({
+          left: $activeEl.first().position().left,
+          width: $activeEl.width()
+        });
+    } else $(".slide-border").remove();
   }
   $(".page-header__menu li").on("mouseover", moveBorderSlide);
   $(".page-header__menu li").on("mouseout", moveBorderSlideToActive);
@@ -268,14 +298,32 @@
   });
 
   // Smooth scroll
-  $('[data-hash]').click(() => {
-    let target = $(event.currentTarget).data('hash'),
-        aosGap = 100; // 100 - aos translate in px
+  $("[data-hash]").click(() => {
+    let target = $(event.currentTarget).data("hash"),
+      aosGap = 100; // 100 - aos translate in px
     if (isMobile()) aosGap = 0;
-    $html.animate({
-      scrollTop: $(target).offset().top - $header.innerHeight() * 1.5 - aosGap
-    }, 1000);
+    $html.animate(
+      {
+        scrollTop: $(target).offset().top - $header.innerHeight() * 1.5 - aosGap
+      },
+      1000
+    );
     return false;
+  });
+
+  // Data
+  $(".form-date").datepicker(settings.datePicker);
+  let disabledDays = [0];
+  $(".form-date").datepicker({
+    onRenderCell: (date, cellType) => {
+      if (cellType == "day") {
+        let day = date.getDay(),
+          isDisabled = !!~disabledDays.indexOf(day);
+        return {
+          disabled: isDisabled
+        };
+      }
+    }
   });
 
   // Sliders
@@ -283,6 +331,7 @@
   $(".slider-guide").flickity(settings.flickity.sliderGuide);
   $(".slider-guide-text").flickity(settings.flickity.sliderGuideText);
   $(".slider-prezi").flickity(settings.flickity.sliderPrezi);
+  $(".slider-events").flickity(settings.flickity.sliderEvents);
   $(".slider-partners").flickity(settings.flickity.sliderPartners);
 
   // Tabs

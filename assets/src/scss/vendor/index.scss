@@ -1,4 +1,12 @@
 @import '../../../../bower_components/aos/dist/aos';
 @import '../../../../bower_components/lightbox2/dist/css/lightbox';
+@import '../../../../bower_components/air-datepicker/dist/css/datepicker';
 @import '../../../../bower_components/flickity/css/flickity';
 @import '../../../../bower_components/flickity-fullscreen/fullscreen';
+
+.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current- {
+  background-color: $primary;
+  @include hover-focus() {
+    background-color: $primary;
+  }
+}

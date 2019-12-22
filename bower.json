@@ -12,6 +12,7 @@
     "flickity": "^2.2.1",
     "particles.js": "^2.0.0",
     "flickity-fullscreen": "^1.1.1",
+    "air-datepicker": "^2.2.3",
     "lightbox2": "^2.11.1"
   }
 }

@@ -89,9 +89,12 @@
         transform: translateY(-50%);
       }
     }
+    .flickity-viewport {
+      transition: height 0.3s;
+    }
     figure {
-      min-height: 150px;
-      height: auto!important;
+      min-height: 270px;
+      height: 70vmin;
     }
     .flickity-button {
       border: $border-width solid $white;
@@ -126,6 +129,32 @@
       width: 150%;
       height: 30%;
       transform: translateY(-50%);
+    }
+  }
+  &-events {
+    width: 100%;
+    .slider-cell {
+      width: 100%;
+      @include media-breakpoint-up(sm) {
+        width: 50%;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 33.3333333%;
+      }
+      & > a {
+        @include media-breakpoint-up(lg) {
+          width: 80%;
+        }
+      }
+    }
+    .flickity-prev-next-button {
+      top: 45%;
+      &.previous {
+        left: -20px;
+      }
+      &.next {
+        right: -20px;
+      }
     }
   }
   &-partners {
