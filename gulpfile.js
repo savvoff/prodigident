@@ -52,6 +52,7 @@ console.log(PATHS);
 
 // Add custom JS
 PATHS.js.push(
+  'bower_components/air-datepicker/dist/js/i18n/datepicker.en.js',
   'assets/src/javascript/modules/*.js',
   'assets/src/javascript/app.js'
 );
@@ -90,8 +91,8 @@ gulp.task('sass', function () {
       .pipe($.cleanCss())
       .pipe($.if(!isProduction, $.sourcemaps.write('.')))
       .pipe(gulp.dest('assets/dist/css'))
-      .pipe(browserSync.stream({match: '**/*.css'}))
-      .pipe($.notify('Compiled: SCSS'));
+      .pipe(browserSync.stream({match: '**/*.css'}));
+      // .pipe($.notify('Compiled: SCSS'));
     }, 500);
 });
 
@@ -111,8 +112,8 @@ gulp.task('javascript', function () {
     .pipe($.if(isProduction, uglifyES))
     .pipe($.if(!isProduction, $.sourcemaps.write()))
     .pipe(gulp.dest('assets/dist/javascript'))
-    .pipe(browserSync.stream())
-    .pipe($.notify('Compiled: Javascript'));
+    .pipe(browserSync.stream());
+    // .pipe($.notify('Compiled: Javascript'));
 });
 
 // SVG sprite
@@ -120,7 +121,7 @@ gulp.task('sprite', function () {
   return gulp.src('assets/src/images/svg/*.svg')
     .pipe($.svgSprite(spriteCfg))
     .pipe(gulp.dest('assets/dist/images'))
-    .pipe($.notify('Compiled: Sprites'))
+    // .pipe($.notify('Compiled: Sprites'))
     .on('error', $.notify.onError({
       message: "<%= error.message %>",
       title: "Sprite Error"
@@ -134,8 +135,8 @@ gulp.task('image', function () {
       pngquant: ['--quality', '60-75'],
       mozjpeg: ['-quality', 60]
     }))
-    .pipe(gulp.dest('assets/dist/images'))
-    .pipe($.notify('Compressed: Images'));
+    .pipe(gulp.dest('assets/dist/images'));
+    // .pipe($.notify('Compressed: Images'));
 });
 
 // Copy task
