@@ -203,10 +203,10 @@
                           el.addEventListener('click', function() {
                             setTimeout(function() {
                               if (customCondEls[0].checked || customCondEls[1].checked) {
-                                document.querySelectorAll('input[name="DCL3"]')[1].disabled = false;
+                                document.querySelector('input[name="DCL3"]').disabled = false;
                               } else {
-                                document.querySelectorAll('input[name="DCL3"]')[1].disabled = true;
-                                document.querySelectorAll('input[name="DCL3"]')[1].checked = false;
+                                document.querySelector('input[name="DCL3"]').disabled = true;
+                                document.querySelector('input[name="DCL3"]').checked = false;
                               }
                             }, 100);
                           })
@@ -241,7 +241,7 @@
                           <thead>
                             <tr>
                               <th class="font-weight-normal" scope="col" colspan="16">
-                                <input class="form__input mx-2" type="radio" name="DCL3" value="1">Digital wax-up
+                                <input class="form__input mx-2" type="radio" name="DCL2" value="1">Digital wax-up
                                 simplified
                                 <input class="form__input mx-2" type="radio" name="DCL3" value="1" disabled>Digital
                                 wax-up in occlusion
@@ -251,6 +251,18 @@
                               </th>
                             </tr>
                           </thead>
+                          <script>
+                            var dcl2 = document.querySelector('input[name="DCL2"]');
+                            var dcl3 = document.querySelector('input[name="DCL3"]');
+                            dcl2.addEventListener('click', function() {
+                              dcl3.checked = false;
+                              this.checked = true;
+                            });
+                            dcl3.addEventListener('click', function() {
+                              dcl2.checked = false;
+                              this.checked = true;
+                            });
+                          </script>
                           <tbody>
                             <tr>
                               <td><input class="form__input bg" type="radio" name="vtp_18" value="1"><span>18</span>
