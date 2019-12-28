@@ -334,7 +334,7 @@
   $(".slider-prezi").flickity(settings.flickity.sliderPrezi);
   $(".slider-partners").flickity(settings.flickity.sliderPartners);
   let $eventSlider = $(".slider-events").flickity(settings.flickity.sliderEvents);
-  if ($eventSlider) {
+  if ($eventSlider.length) {
     let flkty = $eventSlider.data('flickity');
     if (flkty.cells.length < 4 && !isMobile()) {
       $eventSlider.data('destroy');
