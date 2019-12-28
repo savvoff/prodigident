@@ -333,12 +333,14 @@
   $(".slider-guide-text").flickity(settings.flickity.sliderGuideText);
   $(".slider-prezi").flickity(settings.flickity.sliderPrezi);
   $(".slider-partners").flickity(settings.flickity.sliderPartners);
-  let $eventSlider = $(".slider-events").flickity(settings.flickity.sliderEvents),
-      flkty = $eventSlider.data('flickity');
-  if (flkty.cells.length < 4 && !isMobile()) {
-    $eventSlider.data('destroy');
-    settings.flickity.sliderEvents.wrapAround = false;
-    $eventSlider.flickity(settings.flickity.sliderEvents);
+  let $eventSlider = $(".slider-events").flickity(settings.flickity.sliderEvents);
+  if ($eventSlider) {
+    let flkty = $eventSlider.data('flickity');
+    if (flkty.cells.length < 4 && !isMobile()) {
+      $eventSlider.data('destroy');
+      settings.flickity.sliderEvents.wrapAround = false;
+      $eventSlider.flickity(settings.flickity.sliderEvents);
+    }
   }
 
   // Tabs
