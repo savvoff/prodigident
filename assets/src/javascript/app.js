@@ -22,7 +22,9 @@
       duration: 600, // values from 0 to 3000, with step 50ms
       easing: "ease-out-quart", // default easing for AOS animations
       once: false, // whether animation should happen only once - while scrolling down
-      anchorPlacement: "top-bottom" // defines which position of the element regarding to window should trigger the animation
+      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99 // the delay on throttle used while scrolling the page (advanced)
     },
     smoothscroll: {
       // Scrolling Core
@@ -335,10 +337,12 @@
   $(".slider-partners").flickity(settings.flickity.sliderPartners);
   let $eventSlider = $(".slider-events").flickity(settings.flickity.sliderEvents),
       flkty = $eventSlider.data('flickity');
-  if (flkty.cells.length < 4 && !isMobile()) {
-    $eventSlider.data('destroy');
-    settings.flickity.sliderEvents.wrapAround = false;
-    $eventSlider.flickity(settings.flickity.sliderEvents);
+  if ($eventSlider.length) {
+    if (flkty.cells.length < 4 && !isMobile()) {
+      $eventSlider.data('destroy');
+      settings.flickity.sliderEvents.wrapAround = false;
+      $eventSlider.flickity(settings.flickity.sliderEvents);
+    }
   }
 
   // Tabs
