@@ -134,6 +134,7 @@
         }
       },
       sliderPartners: {
+        autoPlay: 2500,
         wrapAround: true,
         pageDots: false,
         groupCells: true,
@@ -313,6 +314,19 @@
     );
     return false;
   });
+  let scrollToFromHash = (id) => {
+    if (id) {
+      let target = $(id),
+        aosGap = 100; // 100 - aos translate in px
+      if (isMobile()) aosGap = 0;
+      $html.animate(
+        {
+          scrollTop: $(target).offset().top - $header.innerHeight() * 1.5 - aosGap
+        },
+        1000
+      );
+    }
+  };
 
   // Data
   $(".form-date").datepicker(settings.datePicker);
@@ -369,6 +383,7 @@
     wrapperOffset();
     setZoomClass();
     moveBorderSlideToActive();
+    scrollToFromHash(window.location.hash);
     setTimeout(() => {
       $loader.addClass("is-load");
       AOS.init(settings.aos);

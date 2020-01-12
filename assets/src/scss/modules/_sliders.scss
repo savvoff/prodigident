@@ -17,6 +17,9 @@
     @include transition(0.3s $ease-out-cubic);
   }
   &-functions {
+    .flickity-viewport {
+      cursor: auto !important;
+    }
     .step {
       width: 100%;
       @include media-breakpoint-up(md) {
@@ -24,7 +27,7 @@
       }
     }
     .flickity-page-dots {
-      bottom: 15%;
+      bottom: 20%;
       .dot {
         background-color: $white;
         border: $border-width solid darken($border-color, 30%);
