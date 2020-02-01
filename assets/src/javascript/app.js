@@ -315,7 +315,7 @@
     return false;
   });
   let scrollToFromHash = (id) => {
-    if (id) {
+    if (id && $(id).length) {
       let target = $(id),
         aosGap = 100; // 100 - aos translate in px
       if (isMobile()) aosGap = 0;
@@ -383,7 +383,7 @@
     wrapperOffset();
     setZoomClass();
     moveBorderSlideToActive();
-    scrollToFromHash(window.location.hash);
+    scrollToFromHash(window.location.hash.slice(0, window.location.hash.indexOf('=')));
     setTimeout(() => {
       $loader.addClass("is-load");
       AOS.init(settings.aos);
